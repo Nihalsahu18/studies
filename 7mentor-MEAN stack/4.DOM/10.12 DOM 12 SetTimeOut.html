@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Set Time out as 3 sec</title>
+  </head>
+  <script>
+    function time() {
+      setTimeout(function () {
+        document.getElementById("p1").innerHTML = "Hello after 3 Sec";
+      }, 3000);
+    }
+  </script>
+  <body>
+    <button onclick="time()">Press Me</button>
+    <p id="p1"></p>
+  </body>
+</html>

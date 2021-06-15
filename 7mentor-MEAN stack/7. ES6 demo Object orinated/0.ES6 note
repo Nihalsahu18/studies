@@ -1,0 +1,183 @@
+(ES6 or ECMA script 15) refers to version 6 of the ECMA(European Computer Manufacturer's Association) Script programming language. 
+ECMA Script is the standardized name for JavaScript, and
+version 6 is the next version after version 5, which was released in 2011
+
+*************************************************
+ES-6
+1> let,const keyword
+2> arrow function
+3> JavaScript classes
+4> array.find & array.findIndex
+5> Expontentials(**)
+6> dafault arguments
+**************************************************
+
+3>JavaScript classes
+
+    classes: Object Orientation is JavaScript
+
+        Object  Orientation programming Specification(OOPS) {rules or standard}
+        -C++
+        -java & spring,Hibernate,Android,struts
+        -Dot.net C#,ASP.net,MVC,sharepoint
+        -JS, Angular,React
+        -Python
+*****************************************************
+4 Pillars
+    -Abstractions:(done by domain experts) Identifying the key aspect to slove the proble.taking requriment of clients.
+    -Encapsulation: It is use for security.Hide the data and provide the interface to access.
+    -Inheritance:(reusebiltiy & Enchancing) use for extensibility & resuablity
+    -Ploymorphism:msg is same just process (extensibility)
+-----------------------------------------------------
+Concepts Object & Its propery
+
+Object: Is an entity which has well defined structure and behaviour.
+
+-Identity:      Attribute(can be single or multiple) of the object having unique Identity.
+-state:
+(static or dynamic):
+-behaviour:     
+-reponsibility: 
+
+************************************************************
+JavaScript Object:
+
+1.JSON syntax
+    var variablename=
+    {
+        key1:value1,
+        key2:value2,
+        ---
+        keyn:valuen
+    }
+    var emp=
+    {
+        eid:1001,
+        ename:"jayshree",
+        deptno:10,
+        location:"pune",
+        cname:"sevenMentor PVT ltd"
+    }
+2.new keyword
+    var personObj=new Object();
+    personObj.firstname="",
+
+******************************************************
+IMPORTANT Topic --------------------------------
+
+Creating Object using Construtor function(before ES6)
+
+function employee(veid,vename,vsal,vdeptno,vaddr,location)
+{
+    this.eid=veid;
+    this.ename=vename;
+    this.sal=vsal;
+    this.deptno=vdeptno;
+    this.addr=vaddr;
+    this.location=location;
+}
+
+var eobj= new employee(1,'nihal',1000,20,"pune","pune");
+
+eobj.eid;
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+function employee(veid,vename,vsal,vdeptno,vaddr,location)
+{
+    this.eid=veid;
+    this.ename=vename;
+    this.sal=vsal;
+    this.deptno=vdeptno;
+    this.addr=vaddr;
+    this.fullname=function()
+    {
+        return this.firstname+" "+this.lastname;
+    }
+}
+var eobj= new employee(1,'nihal',1000,20,"pune","pune");
+eobj.eid;
+
+var emp={
+    eid:100,
+    ename:"xyx",
+    deptno:10,
+    add:{
+        localAddr:"",
+        permtAddr:""
+    }
+    contactNo:
+    {
+        mobileno:
+        landline:
+    }
+}
+emp.addr.localAddr;
+*******************************************************
+arrow JSON
+json array
+all the object should have same key *********
+var obj=[
+    {
+        proid:101,
+        pname:"aaa"
+    },
+    {
+        proid:201,
+        pname:"bbb"
+    },
+    {
+        proid:301,
+        pname:"bbb"
+    }
+]
+that why we use dor loop for json array.
+
+**********************************************************
+Object Creation using CONSTRUCTER function
+
+function employee(eid,ename,sal)
+{
+    this.eid=eid;
+    this.ename=ename;
+}
+var eobj=new employee(12,"sfds");
+---------------------------------------------------------
+function employee(eid,ename,sal){
+    this.eid=eid;
+    this.ename=ename;
+    this.sal=sal;
+    this.calculatesal=function()
+    {
+        var pf=this.sal*0.10;
+        var hra=this.sal*0.12;
+        this.sal=this.sal-pf;
+    }
+}
+
+****************************************************************
+class keyword
+
+class Student
+{
+    Construtor(rollno,std,div,m1,m2,m3,m4,m5)
+    {
+        this.rollno=rollno;
+        this.std=std;
+        this.div=div;
+        this.m1=m1;
+        this.m2=m2;
+        this.m3=m3;
+        this.m4=m4;
+        this.m5=m5;
+    }
+}
+
+*******************************************************ASSginment****
+write a class product with data member
+pid,pname,price,description,discount
+member methods: showDetail(),calculateDiscount()
+
+******************************************************************
+let keyword: allows to delcare variable with block scope.
+Const Keyword: this use for constant.
+*******************************************************************

@@ -1,0 +1,52 @@
+BootStraps is a frame work(use CSS,HTML & Javascript)
+    -We can create Responsive Web Desgin: UI automatically fit in various device.
+    -Mobile first appraoch.
+    -work on grid system.
+    -created by twitter.
+
+viewport:user visible area on webpage
+viewport
+<meta name="viewport" content="width=device-width,intialscale=1"/>
+
+
+Download boot BootStraps
+
+Advantages of BootStraps
+    -Rapid Application Desgin
+    -Easy to use
+    -Responsive Features
+    -Mobile-first appraoch.
+    -Browser Complplitable
+    -Open source.
+
+BootStraps Packages
+    -scaffolding
+        BootStraps provides a basic structure with grid system,link styles and background.
+    -CSS
+        
+    -Components
+    -Javascript Plugins
+    -Customize
+
+*******************  Form   **************************
+
+Vertical Form:
+
+1.add role to form tag.
+2.Wrap label and input tag in a div with class form-group
+3.For all Input type apply form-control css class.
+------------------------------------------------------
+Horizontal Form:
+
+1.Add form-horizontal class to form tag.
+2.Wrap label and input tag in a div with class form-group
+3.For all Input type apply form-control css class.
+4.
+-------------------------------------------------------
+
+Inline
+------------------
+static form-control
+***************************************************
+
+websitesetup.org/bootstrap-tutorial-for-beginners/

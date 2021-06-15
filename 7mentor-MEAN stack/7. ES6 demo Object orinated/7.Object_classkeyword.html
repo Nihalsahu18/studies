@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class student {
+            constructor(rollno, name, std, div, m1, m2, m3, m4, m5, total = 0, peri = 0) {
+                this.rollno = rollno;
+                this.name = name;
+                this.std = std;
+                this.div = div;
+                this.m1 = m1;
+                this.m2 = m2;
+                this.m3 = m3;
+                this.m4 = m4;
+                this.m5 = m5;
+                this.total = total;
+                this.peri = peri;
+
+            }
+            calper() {
+                this.total = this.m1 + this.m2 + this.m3 + this.m4 + this.m5;
+                this.peri = (this.total / 5);
+
+                console.log("this percentage is " + this.peri);
+                return this.peri;
+
+            }
+            listDetails() {
+                console.log(this.rollno);
+                console.log(this.name);
+                console.log(this.std);
+                console.log(this.div);
+                console.log(this.m1);
+                console.log(this.m2);
+                console.log(this.m3);
+                console.log(this.m4);
+                console.log(this.m5);
+                console.log(this.total);
+                console.log(this.peri);
+            }
+
+        }
+        var stud1 = new student(1, "nihal", "6th", "A", 40, 50, 70, 99, 30);
+        stud1.listDetails();
+        stud1.calper();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

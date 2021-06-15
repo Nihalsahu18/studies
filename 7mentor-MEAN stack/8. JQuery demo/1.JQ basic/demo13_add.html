@@ -1,0 +1,42 @@
+<html>
+<script src="lib/jquery.min.js">
+</script>
+<script>
+	$(document).ready(function () {
+		var count = -1;
+		$("#btn1").click(function () {
+			var fruits = new Array('Peru', 'Mango', 'WaterMelon');
+			if (count == fruits.length - 1) {
+				count = -1;
+				alert('sorry it is full now');
+			} else {
+				count += 1;
+				$('#list1').append("<li>" + fruits[count] + "</li>");
+			}
+		})
+		$("#btn2").click(function () {
+			var fruits = new Array('Peru', 'Mango', 'WaterMelon');
+			if (count == fruits.length - 1) {
+				count = -1;
+				alert('sorry it is full now');
+			} else {
+				count += 1;
+				$('#list1').prepend("<li>" + fruits[count] + "</li>");
+			}
+		})
+		$("#btn3").click(function () {
+			$('#list1').empty();
+		})
+	});
+</script>
+<b style='color:blue'>Add Your Fav Fruits</b><br>
+<ul id='list1'>
+	<li>Apple</li>
+	<li>Banana</li>
+	<li>Pineapple</li>
+</ul>
+<button id='btn1'>Append</button>
+<button id='btn2'>Prepend</button>
+<button id='btn3'>Empty List</button>
+
+</html>

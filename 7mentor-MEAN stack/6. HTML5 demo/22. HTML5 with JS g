@@ -1,0 +1,17 @@
+Html 5 feature
+1.audio
+2.video
+3.Google maps
+4. storage
+
+
+*******
+1.window.localstorage: store the data with no expiration.
+2.window.sessionStorage:store the date for one session.
+
+session is user from log in to log out.(every session has unique id)
+
+object
+setItem("key","value")
+getItem("key")
+removeItem("key")

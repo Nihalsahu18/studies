@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<script src="lib/jquery.min.js">
+	</script>
+	<script>
+		$(document).ready(function () {
+			$("#btn1").click(function () {
+				var a = parseInt($("#no1").val());
+				var b = parseInt($("#no2").val());
+				$('#res1').val("Add is = " + (a + b));
+			})
+			$("#btn2").click(function () {
+				var a = parseInt($("#no1").val());
+				var b = parseInt($("#no2").val());
+				$('#res2').text("Sub is = " + (a - b));
+			})
+			$("#btn3").click(function () {
+				var a = parseInt($("#no1").val());
+				var b = parseInt($("#no2").val());
+				$('#res2').html("<i>Div is = " + (a / b) + "</i>");
+			})
+		});
+	</script>
+</head>
+
+<body>
+	Number 1 <input type='text' id='no1'><br>
+	Number 2 <input type='text' id='no2'><br>
+	Result <input type='text' id='res1' readonly="readoly" style='background:lightgrey'><br>
+	Result <b id='res2'> </b><br><br>
+	<button id='btn1'>ADD</button>
+	<button id='btn2'>SUB</button>
+	<button id='btn3'>DIV</button>
+
+</body>
+
+</html>

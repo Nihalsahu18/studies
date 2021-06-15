@@ -1,0 +1,133 @@
+<html>
+<style>
+	body {
+		background: black;
+	}
+
+	table {
+		margin-top: 50px;
+		margin-left: 210px;
+		border: 2px solid white;
+	}
+
+	th {
+		border-left: 2px solid white;
+		border-bottom: 2px solid white;
+		color: yellow;
+		width: 200px;
+	}
+
+	tr {
+		height: 50px;
+	}
+
+	.c1 {
+		background: gray;
+		color: blue;
+		border-left: none;
+		font-size: 20px;
+	}
+</style>
+<script src="lib/jquery.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('th').mouseenter(function () {
+			$(this).addClass('c1');
+			$('#showImg').empty();
+			var id = $(this).attr('id');
+			if (id == 'Great Pyramid of Giza') {
+				$('#showImg').append(
+					"<img src='Great Pyramid of Giza.jpg' height='350px' width='400px'/>");
+				$('#description').find('p').html(
+					'The Great Pyramid of Giza (also known as the Pyramid of Khufu or the Pyramid of <br>Cheops) is the oldest and largest of the three pyramids in the Giza Necropolis <br>bordering what is now El Giza, Egypt. It is the oldest of the Seven Wonders of the Ancient<br> World, and the only one to remain largely intact.'
+				);
+			}
+			if (id == 'Colosseum') {
+				$('#showImg').append("<img src='Colosseum.jpg' height='350px' width='400px'/>");
+				$('#description').find('p').html(
+					'<i>The Hanging Gardens of Babylon were one of the Seven Wonders</i> of the <br>Ancient World, and the only one of the wonders that may have been purely legendary. <br>They were purportedly built in the ancient city-state of Babylon, near present-day <br>Al Hillah, Babil province, in Iraq. '
+				);
+			}
+			if (id == 'Great Wall of China') {
+				$('#showImg').append(
+					"<img src='Great Wall of China.jpg' height='350px' width='400px'/>");
+				$('#description').find('p').html(
+					'The great seated statue was created by the Greek sculpter Phidias and<br> it was half occupied with the width of the aisle of the temple built to house it. "It seems <br>that if Zeus were to stand up," the geographer Strabo noted early in the 1st century BC,<br> "he would unroof the temple.'
+				);
+			}
+			if (id == 'Hagia Sophia') {
+				$('#showImg').append("<img src='Hagia Sophia.jpg' height='350px' width='400px'/>");
+				$('#description').find('p').html(
+					'The Temple of Artemis,also known less precisely as the Temple of Diana, was a Greek <br>temple dedicated to the goddess Artemis and was one of the Seven Wonders of the Ancient <br>World. It was located in Ephesus, and was completely rebuilt three times before its eventual <br>destruction in 401.'
+				);
+			}
+			if (id == 'Stonehenge') {
+				$('#showImg').append("<img src='Stonehenge.jpg' height='350px' width='400px'/>");
+				$('#description').find('p').html(
+					'The Mausoleum at Halicarnassus or Tomb of Mausolus[1] was a tomb built<br>	 between 353 and 350 BC at Halicarnassus (present Bodrum, Turkey) for Mausolus, a satrap  <br>in thePersian Empire, and Artemisia II of Caria, who was both his wife and his sister.'
+				);
+			}
+			if (id == 'Machu Picchu') {
+				$('#showImg').append("<img src='Machu Picchu.jpg' height='350px' width='400px'/>");
+				$('#description').find('p').html(
+					'15th-century Inca site located 2,430 metres (7,970 ft) above sea level.[1][2] Machu<br> Picchu is located in the Cusco Region of Peru, South America. It is situated on a <br>mountain ridge above the Urubamba Valley in Peru, which is 80 kilometres (50 mi) northwest<br> of Cusco and through which the Urubamba River flows.'
+				);
+			}
+			if (id == 'Taj Mahal') {
+				$('#showImg').append("<img src='Taj Mahal.jpg' height='350px' width='400px'/>");
+				$('#para1').html(
+					'In 1631, Shah Jahan, emperor during the Mughal empires period of greatest prosperity,<br> was grief-stricken when his third wife, Mumtaz Mahal, died during the birth of their<br> 14th child, Gauhara Begum. Construction of the Taj Mahal began in 1632.The court <br>chronicles of Shah Jahans grief illustrate the love story'
+				);
+			}
+		})
+		$('th').mouseleave(function () {
+			$(this).removeClass('c1');
+		})
+	})
+</script>
+
+<body>
+	<table>
+		<tr>
+			<td colspan='2' style='border-bottom:2px solid white'>
+				<marquee style='color:red;font-weight:bold;font-size:20px;' behavior='alternate'></u>7 New Wonders Of
+					World</u></marquee>
+			</td>
+		</tr>
+		<tr>
+			<td style='border-bottom:2px solid white' rowspan='7' id='showImg'>
+				<img src='Great Pyramid of Giza.jpg' height='350px' width='400px' />
+			</td>
+			<th id='Great Pyramid of Giza'>Great Pyramid of Giza </th>
+		</tr>
+		<tr>
+			<th id='Colosseum'>Colosseum </th>
+		</tr>
+		<tr>
+			<th id='Great Wall of China'> Great Wall of China </th>
+		</tr>
+		<tr>
+			<th id='Hagia Sophia'>Hagia Sophia </th>
+		</tr>
+		<tr>
+			<th id='Stonehenge'>Stonehenge </th>
+		</tr>
+		<tr>
+			<th id='Machu Picchu'>Machu Picchu </th>
+		</tr>
+		<tr>
+			<th id='Taj Mahal'>Taj Mahal</th>
+		</tr>
+		<tr style='height:100px'>
+			<td colspan='2' style='background:gray;font-size:15px;font-weight:bold;color:indigo' id='description'>
+				<p id="para1">The Great Pyramid of Giza (also known as the Pyramid of Khufu or the Pyramid of
+					<br>Cheops) is the
+					oldest and largest of the three pyramids in the Giza Necropolis <br>bordering what is now El Giza,
+					Egypt. It is the oldest of the Seven Wonders of the Ancient<br> World, and the only one to remain
+					largely intact.</p>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

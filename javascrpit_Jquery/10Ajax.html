@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        function onDataReceived(data) {
+            console.log(data);
+        }
+        $(document).ready(function() {
+            $('button').click(function() {
+                var url = 'http://services.faa.gov/airport/status/{CODE}'
+                    .replace('{CODE}', $(input).val());
+                $.get(url, onDataReceived);
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <input placeholder="Enter Airport Name"></input>
+    <button type="submit">Get Info</button>
+    <table style="text-align: left;" cellspacing>
+        <tr>
+            <th>Airport Name</th>
+            <td id="name"></td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td id="city"></td>
+        </tr>
+
+        <tr>
+            <th>Weather</th>
+            <td id="weather"></td>
+        </tr>
+
+        <tr>
+            <th>Temperature</th>
+            <td id="temperature"></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

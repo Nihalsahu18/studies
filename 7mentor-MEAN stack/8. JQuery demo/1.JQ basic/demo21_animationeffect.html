@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div").mouseenter(function () {
+                $(this).animate({
+                    width: '200px',
+                    height: '200px',
+                    fontSize: '24px',
+                    backgroundColor: 'blue'
+                });
+                $(this).animate({
+                    width: '300px',
+                    height: '300px',
+                    fontSize: '40px',
+                    backgroundColor: 'green'
+                });
+                $(this).animate({
+                    width: '200px',
+                    height: '200px',
+                    fontSize: '24px',
+                    backgroundColor: 'yellow'
+                });
+                $(this).animate({
+                    width: '100px',
+                    height: '100px',
+                    fontSize: '18px',
+                    backgroundColor: 'gray'
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div style="width:100px;height:100px;background-color:palegreen;font-size:18px">
+        Hello world
+    </div>
+</body>
+
+</html>

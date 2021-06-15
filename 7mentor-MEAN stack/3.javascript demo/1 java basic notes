@@ -1,0 +1,120 @@
+java script is scripting language.
+scripting language doesn't have any intermidate format during execution.
+e.g complie-.class-executed at runtime(interpreted)
+
+uptill now we have seen static page for html & css.
+by using the java script we make our web page interactive.
+
+-user will interact via input.
+
+base is html for every web develpt.
+javascript is not a type safe language.                                              /*important*/
+e.g var i=10;
+var name=" jayshree C"
+var mobileno="8798969698"
+var fulltimestatus=true;
+var yearofexp=12;
+
+-we inculde script tag in head or body section of our html page.
+    - internal JS
+            syntax: <html><head><script></script></head></html>
+    - external JS
+            syntax:
+            1 demo.JS
+            2 <html>
+                <head>
+                <script src="demo.js">
+                </script>
+                </head>
+            </html>
+
+JS Topic-
+-variable
+-control structures are work
+-array
+-function
+-scripting
+-Dom                                                                                /*important*/
+-Object orientation in JS
+
+**************************************************************************
+*Control structures
+-conditional contrl structures
+    -if else, else if....., switch case
+    1> if else
+    syntax: if(condition)
+            {
+            }
+            else
+            {
+            }
+**************************************************************************
+-iterative control structures
+    -for loop & while, do while
+1> while
+    while(cond)
+    {
+        Increment/decrement
+    }
+
+     2*1
+     2*2
+     2*3
+     2*4
+     ...
+     2*10
+
+    var i=10;
+    var num=2;
+    while(i<=10)
+    {
+        document.write(i*num+"<br>");
+    }
+2> for loop
+    syntax:
+            once                    every iternation
+    for(variable_initialization;condition;Increment/decrement)
+    {
+    }
+    e.g for(var i=1;i<10;i++)
+    { document.write(i+"<br>");}
+
+
+***************************************************************
+-JS dialog boxes
+1.alert
+    syntax:
+            alert("hi...");
+2.prompt
+    syntax:
+            var age=prompt("enter the age..",18); /* default value use comma*/
+3.confrim
+
+****************************************************************
+if else assignment
+1. wirte a js program to check whether number is odd or even. take input from user.(prompt)-done
+2. check whether number is postive,nagtavie or zero.-done
+3. check the maximum of 2 numbers.
+4. check the mini of 2 numbers.
+5. check wheater number is divisble by 5 & 11.
+6. Check wether year is leap year or not.
+7. Check whether a charcter is vowel or not. && or 
+8 wirte a js program to ask user to enter the weeknum and print the day if user giving above 7 error
+
+************************************************************************
+
+1.while loop print following pattern.
+    *
+    **
+    ***
+    ****
+    no. line by user
+
+2. by using while loop print first 5 even numbers.
+3. by using while loop find the factorial of a given number.
+    e.g 5! = 5*4*3*2*1 =120
+4. write a program using while loop to find addition of first 10 numbers.
+assignment*********************************************************
+5. write a program using while loop to find addition of first 10 numbers. even number
+6. take a number from user and find it out no if digit in the number using while loop. e.g 123 o/p=3.
+7. write a program to find addition of the digit from the given number. e.g num=567 o/p=18

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = prompt("enter co-efficient of X^2");
+        var b = prompt("enter co-efficient of X^1");
+        var c = prompt("enter co-efficient of X^0");
+        var x1 = 0,
+            x2 = 0,
+            dis = 0,
+            real = 0,
+            imag = 0;
+
+        dis = b * b - 4 * a * c;
+
+        if (dis > 0) {
+            x1 = ((-b + math.sqrt(dis)) / (2 * a));
+            x2 = ((-b - math.sqrt(dis)) / (2 * a));
+            document.write("Roots are real and different<br>");
+            document.write("first root is" + x1 + "<br> Second root is " + x2);
+        } else if (dis == 0) {
+            x1 = ((-b + math.sqrt(dis)) / (2 * a));
+            x2 = x1;
+            document.write("Roots are real and same <br>");
+            document.write("first root is" + x1 + "<br> Second root is " + x2);
+        } else {
+            real = -b / (2 * a);
+            imag = Math.sqrt(-dis) / (2 * a);
+            document.write("Roots are complex and different <br>");
+            document.write("first root is x1" + real + "+" + imag + "i" + "<br>");
+            document.write("first root is x2" + real + "-" + imag + "i" + "<br>");
+        }
+    </script>
+</body>
+
+</html>

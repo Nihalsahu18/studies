@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function validate()
+        {
+            var uid = document.f1.uid.value;
+            if (uid.length < 8 || uid.length > 12)
+            {
+                alert("UID length should be 8-12");
+                document.f1.uid.value = "";
+                document.f1.uid.focus();
+                return false;
+            }
+
+            var pwd = document.f1.pwd.value;
+            if (pwd.length < 6 || pwd.length > 12) {
+                alert("Passsword length should be 6-12");
+                document.f1.pwd.value = "";
+                document.f1.pwd.focus();
+                return false;
+            }
+            var numflag = false;
+
+            var capitalflag = false;
+            var spflag = false;
+            for (i = 0; i < pwd.length; i++)
+            {
+                var ascii = pwd.charCodeAt(i);
+                if (ascii >= 48 && ascii <= 57)
+                    numflag = true;
+                if (ascii >= 65 && ascii <= 90)
+                    capitalflag = true;
+                if (!((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122) || (ascii >= 48 && ascii <= 57)))
+                    spflag = true;
+            }
+            if (numflag == false || capitalflag == false || spflag == false)
+            {
+                //alert("Atleast one digit is required in password ");
+                //alert("invalid password - one digit, one capital and one special character");
+                document.getElementById("pwderror").innerHTML = "invalid password";
+                document.f1.pwd.value = "";
+                document.f1.pwd.focus();
+                return false;
+            }
+
+         return true;
+            
+        }
+    </script>
+</head>
+<body>
+    <form name="f1" onsubmit="return validate()">
+        Enter UID : <input type="text" name="uid" /> <br/>
+        Enter pwd : <input type="text" name="pwd"/> 
+	<span id="pwderror" style="color:blue"></span> <br/>
+        <input type="submit" value="LOGIN" />
+    </form>
+</body>
+</html>

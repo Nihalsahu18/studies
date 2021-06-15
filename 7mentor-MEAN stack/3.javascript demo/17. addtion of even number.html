@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = prompt("uptill number you want from 1 to");
+        var i = 2;
+        var sum = 0;
+        var count = 0;
+        while (i <= num) {
+            sum = sum + i;
+            i = i + 2;
+            count++;
+        }
+        document.write(sum + "<br>");
+        document.write(count);
+        document.write("*******************************************<br>");
+        document.write("*******************************************<br>");
+        for (var num = prompt("uptill number you want from 1 to"), i = 2, sum = 0, count = 0; i <= num; count++) {
+            sum = sum + i;
+            i = i + 2;
+
+        }
+        document.write(sum + "<br>");
+        document.write(count);
+    </script>
+</body>
+
+</html>

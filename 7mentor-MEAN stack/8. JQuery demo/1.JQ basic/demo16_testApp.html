@@ -1,0 +1,38 @@
+<html>
+<script src="lib/jquery.min.js">
+</script>
+<script>
+	$(document).ready(function () {
+		var count = -1;
+		$("#btn1").click(function () {
+			var colors = new Array('Red', 'Blue', 'Green',
+				'Indigo', 'SkyBlue', 'Pink', 'Black', 'Yellow', 'YellowGreen',
+				'Purple', 'lavender', 'Aqua', 'DarkBlue');
+			if (count == colors.length - 1) {
+				alert('sorry it is full now');
+				count = -1;
+			} else {
+				count += 1;
+				$("<li>" + colors[count] + "</li>").appendTo("#list1").select(this).css({
+					'color': colors[count]
+				})
+				$("li").click(function () {
+					$(this).remove();
+				})
+			}
+		})
+		$("#btn2").click(function () {
+			$('#list1').empty();
+			//count=-1;
+		})
+	});
+</script>
+<b style='color:blue'>Add Your Fav Colors</b><br>
+<ul id='list1'>
+</ul>
+<button id='btn1'>Add New Color</button>
+<button id='btn2'>Empty List</button><br><br>
+<b style='color:red;font-weight:bold;font-family:arial'>Note:If you want delete any color from above list just click on
+	it</b>
+
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="lib/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#remove").click(function () {
+                $("#desc").remove();
+            });
+            $("#empty").click(function () {
+                $("#desc").empty();
+            });
+            $("#before").click(function () {
+                $("ul").before("<a href='#'>More Desc </a>");
+            });
+            $("#after").click(function () {
+                $("ul").after("<a href='#'>More Examples </a>");
+            });
+            $("#prepend").click(function () {
+                $("h2").prepend("<u>Java Script Library</u>");
+            });
+            $("#append").click(function () {
+                $("h2").append("easy clinet side scripting");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="desc" style="width:500px;height:500px;background-color:yellow">
+        <h2> Learning JQuery </h2>
+        <p> Jquery is lightweight which is used as write less and do more </p>
+        <p> Jquery functionalities are diff actions to <br />
+            be performed on selected element
+        </p>
+        <p> Jquery effects </p>
+        <ul>
+            <li> Hiding </li>
+            <li> Fading </li>
+            <li> Sliding </li>
+            <li> animation </li>
+        </ul>
+    </div>
+    <button id="remove">Remove div</button>
+    <button id="empty">Empty div</button> <br />
+    <button id="before">Add before UL</button>
+    <button id="after">Add after UL div</button> <br />
+    <button id="prepend">Prepend in h2</button>
+    <button id="append">Append in H2</button>
+</body>
+
+</html>

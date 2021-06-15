@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $(`p`).click(function() {
+                $(this).css('color', 'red')
+            })
+            $(`li`).dblclick(function() {
+
+                $(this).css('color', 'red')
+
+            })
+            $(`.paragraph1`).hover(function() {
+                $(this).css('color', 'red')
+            }, function() {
+                $(this).css('color', 'blue')
+            })
+            $(document).keypress(() => {
+                console.log("hello");
+            })
+            $('input').focus(function() {
+                $(this).css('border', '5px solid red')
+            })
+            $('input').blur(function() {
+                $(this).css('border', '')
+            })
+
+
+
+        })
+    </script>
+
+</head>
+
+<h1 id="title">Title</h1>
+<p class="paragraph">Lorem ipsum dolor sit amet</p>
+<p class="paragraph1">Lorem ipsum dolor sit amet</p>
+<input type="text" name="csscol" id=""></input>
+
+<ul>
+    <li>List1</li>
+    <li>List2</li>
+    <li class="li3">List3</li>
+    <li>List4</li>
+    <li>List5</li>
+</ul>
+
+<ul>
+    <li>List1</li>
+    <li>List2</li>
+    <li class="li3">List3</li>
+    <li>List4</li>
+    <li>List5</li>
+</ul>
+<script type="text/javascript">
+    $(`p`).css("outline", '1px solid {{csscol}}');
+    $(`#title`).css("outline", '3px solid blue');
+    $(`.paragraph1`).css("outline", '3px solid green');
+    $(`ul .li3`).css("outline", '3px solid green');
+</script>
+</body>
+
+</html>

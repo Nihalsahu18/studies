@@ -1,0 +1,56 @@
+Synchronous VS Asynchronous
+Synchronous
+    A synchronous request blocks the clients until operation completes i.e browser is not unresponsive.
+    In such case, javascript engine of the browser is blocked.
+Asynchronous(AJAX web-application Model)
+    An Asynchronous request doesn't block the client l.e browser is responsive. At that time,user can perform another operations
+
+
+What is AJAX
+-
+Ajax is not a programming language.
+
+Ajax just uses a combination of:
+1.A broweser built-in XMLHttpRequest Object
+2.javascript And HTML DOM(to display or use the data)
+*****************************************
+3.XML or JSON
+    For carrying data to and from server.JSON is like XML but short and faster than XML.
+
+
+How AJAX worksd
+******************************************
+browser
+++++++++++++++++++++++++++++++++
+An Event Occurs...
+=create an XMLHttpRequest Object
+=Send Http request
++++++++++++++++++++++++++++++++++
+----->
+internt
+
+----->
+******************************************************
+server
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=process HTTPRequest
+=Create A reposne and send data back to the browser
+******************************************************
+
+------>
+internt
+------->
+
+**********************************************
+browser
++++++++++++++++++++++++++++++++++++++++++++++
+=Process the returned data using javascript
+=Updated page content
+**********************************************
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AJAX communicate with server using XMLHttpRequest
+
+Method of XMLHttpRequest Object
+
+

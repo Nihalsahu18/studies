@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function blur() {
+            // taking element by ID and for storing in new variable called name
+            var name = document.getElementById("txt1").value;
+
+            // printing name in next div called (d1) using element by ID & innerHTML
+            document.getElementById("d1").innerHTML = "Hello Dear " + name;
+
+            //storing name in new variable called len.
+            var len = document.getElementById("d2").innerHTML = "length = " + name;
+
+            //printing lenght in new div called (d2) using element by Id & innerHTML
+            document.getElementById("d2").innerHTML = "length = " + name.length;
+
+        }
+    </script>
+</head>
+
+<body>
+    <label>Enter Name:</label><input type="text" id="txt1" onblur="blur()">
+    <div id="d1"></div>
+    <div id="d2"></div>
+</body>
+
+</html>

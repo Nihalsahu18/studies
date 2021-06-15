@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changestyle() { // declare function
+            // x is new variable for storing new values for first paragraph
+
+            var x = document.getElementById("P1"); // taking element by id
+            x.style.background = "red"; // taking background color
+            x.style.color = "white"; // taking font color
+            x.style.fontSize = 30; //taking font size
+
+            //y is new variable for storing new values for second paragraph
+
+            var y = document.getElementById("P2"); // taking element by id
+            y.style.background = "red"; // taking background color
+            y.style.fontSize = 50; //taking font size
+        }
+
+        function reset() { // declare function
+
+            var z = document.getElementById("P1"); // taking element by id
+            z.style.background = "white"; // taking background color
+            z.style.color = "black"; // taking font color
+            z.style.fontSize = 60; //taking font size
+
+            var r = document.getElementById("P2"); // taking element by id
+            r.style.background = "white"; // taking background color
+            r.style.color = "black"; // taking font color
+            r.style.fontSize = 60; //taking font size
+        }
+
+        function pressme() { // declare function
+
+            var q = document.getElementById("P3"); // taking element by id
+            q.style.background = "black"; // taking background color
+            q.style.color = "red"; // taking font color
+            q.style.fontSize = 20; //taking font size
+
+            var w = document.getElementById("P4"); // taking element by id
+            w.style.background = "yellow"; // taking background color
+            w.style.color = "blue"; // taking font color
+            w.style.fontSize = 70; //taking font size
+            w.style.fontStyle = "Times";
+
+            var e = document.getElementById("P5"); // taking element by id
+            e.style.fontSize = 30; //taking font size
+            e.style.border = "2px solid red";
+            e.style.padding = "10px";
+            e.style.fontStyle = "Times";
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="changestyle()">change</button>
+    <!--calling function on button(onclick)-->
+    <p id="P1">This is my First Paragraph</p>
+    <!--Para 1 with id=P1-->
+    <p id="P2">This is my second Paragraph</p>
+
+    <button onclick="reset()">change</button>
+
+    <button onclick="pressme()">Press Me</button>
+    <p id="P3">This is my third Paragraph</p>
+    <p id="P4">This is my fourth Paragraph</p>
+    <p id="P5">This is my fifth Paragraph</p>
+    <br>
+    <br>
+
+</body>
+
+</html>

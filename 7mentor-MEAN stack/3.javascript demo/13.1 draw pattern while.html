@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>* pattern</title>
+  </head>
+
+  <body>
+    <h2>
+      *********************************************************************
+    </h2>
+
+    <script>
+      //  -------
+      //  ---*---
+      //  --***--
+      //  -*****-
+      //  *******
+      //  -*****-
+      //  --***--
+      //  ---*---
+      //  -------
+
+      document.write("<br><br>");
+      var i = prompt("enter the line");
+      for (var x = 1, s = i; x <= i; x++) {
+        for (var z = s / 2; z > 0; z--) {
+          document.write("-");
+        }
+        s--;
+        for (var y = 1; y <= x; y++) {
+          if (y % 2 === 0) {
+            document.write("*");
+          } else {
+            document.write("**");
+          }
+        }
+        document.write("<br>");
+      }
+
+      var x = 10,
+        y = 10;
+
+      for (var i = 1; i < y; i++) {
+        for (var j = 1; j < x; j++) {
+          if (i <= y / 2 && j >= y / 2 - (i - 1) && j <= y / 2 + (i - 1)) {
+            document.write("*");
+          } else if (
+            i >= y / 2 &&
+            j > (y / 2 - i) * -1 &&
+            j < y - (y / 2 - i) * -1
+          ) {
+            document.write("*");
+          } else {
+            document.write("8");
+          }
+        }
+        document.write("<br>");
+      }
+    </script>
+    <h2>
+      *********************************************************************
+    </h2>
+  </body>
+</html>

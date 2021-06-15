@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function msg() {
+        //     return "hello all !";
+        // }
+        var msg = function () {
+            return "Hi ..";
+        }
+
+        function add(fn, n1, n2) {
+            document.write("Addition is " + (n1 + n2));
+            var m = fn();
+            document.write("<br> After Addition " + m);
+        }
+        add(msg, 5, 6);
+    </script>
+</head>
+
+<body>
+    <h1>Demo for callback function !</h1>
+</body>
+
+</html>

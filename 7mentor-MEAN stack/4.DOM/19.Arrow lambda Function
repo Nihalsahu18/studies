@@ -1,0 +1,23 @@
+callback function is automaticaly called in another function as arugments.
+
+Anonymous function
+Anonymous function: Which does not have any name.
+-handly for callback & event handling.
+
+var msg=function()
+{retuen"hello all.."}
+console.log(msg());
+var add=function(n1,n2)
+{return"addition is "+(n1+n2);}
+console.log(add(5,8));
+
+******************************************
+Arrow function:
+
+symbol ()=>{} 
+to call 
+    var variablenm=()=>{}
+
+******************************************
+assginment
+1. wirte a JS program using arrow function to calculate area of circle.3.14*r*r

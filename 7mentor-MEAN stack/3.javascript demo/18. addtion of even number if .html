@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = prompt("uptill number you want from 1 to");
+        var i = 1;
+        var sum = 0;
+        var count = 0;
+        while (i <= num) {
+            if (i % 2 === 0) {
+                sum = sum + i;
+                count++;
+            }
+            i++;
+        }
+        document.write(sum + "<br>");
+        document.write(count);
+    </script>
+</body>
+
+</html>

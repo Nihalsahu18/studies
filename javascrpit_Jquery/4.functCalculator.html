@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var resultElements;
+
+        function setDefaultText() {
+            for (var i = 0; i < resultElements.length; i++) {
+                var element = resultElements[i];
+                element.innerText = element.getAttribute('function') + "(x) = ";
+            }
+        }
+
+        function getUserInput() {
+
+            var rawValue = document.getElementById('userInput').value.trim();
+            console.log(rawValue);
+            if (rawValue.length == 0) {
+                throw "you must enter a number"
+            }
+            var num = Number(rawValue);
+            if (isNaN(num)) {
+                throw rawValue + "is not a number"
+            }
+
+            return rawValue;
+        }
+
+        function calculateResult() {
+            try {
+                var x = getUserInput();
+            } catch (error) {
+                alert('Error:' + error);
+                return;
+            }
+            setDefaultText();
+            for (var i = 0; i < resultElements.length; i++) {
+                var element = resultElements[i];
+                var functionName = element.getAttribute('function');
+                var func = Math[functionName];
+                var result = func(x);
+                element.innerText = element.innerText + " " + result;
+            }
+        }
+
+
+        window.onload = function() {
+            resultElements = document.getElementsByClassName('result');
+            setDefaultText();
+            document.getElementById('btnCalculate').addEventListener('click', calculateResult)
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Function Calculator</h1>
+    <label>x=</label><input type="text" id="userInput"> </input>
+    <button id="btnCalculate">Calculate</button>
+    <br>
+    <br>
+    <p class="result" function="sin"></p>
+    <p class="result" function="cos"></p>
+    <p class="result" function="tan"></p>
+    <p class="result" function="log"></p>
+</body>
+
+</html>

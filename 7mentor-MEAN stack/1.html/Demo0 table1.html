@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+
+<body>
+    <h5>One Colounm</h5>
+    <table border=1px>
+        <tr>
+            <td>100</td>
+        </tr>
+    </table>
+
+    <h5>Vertical head</h5>
+    <table border=1px>
+        <tr>
+            <th>Name:</th>
+            <td>Bill Gate</td>
+        </tr>
+        <tr>
+            <th>Telephone:</th>
+            <td>87969687</td>
+        </tr>
+        <tr>
+            <th>Telephone:</th>
+            <td>100100</td>
+        </tr>
+    </table>
+    <h5>Colm Span</h5>
+    <table border=1px>
+        <tr>
+            <th>Name:</th>
+            <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+            <td>Nihal Sahu</td>
+            <td>87969687</td>
+            <td>100100</td>
+        </tr>
+        <tr>
+            <td>Anshul</td>
+            <td>123456</td>
+            <td>654321</td>
+        </tr>
+    </table>
+    <h5>Row Span</h5>
+    <table border="1">
+        <tr>
+            <th>F.Name:</th>
+            <td>Bill Gate</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone</th>
+            <td>87969687</td>
+        </tr>
+        <tr>
+            <td>123456</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <form Action="www.google.com" method="GET">
+        <label>Employee id:</label><input type="text" Name="E.Id" id="E.id" placeholder="Enter your Employee id"><br>
+        <label>Telephone:&nbsp;</label><input type="tel" Name="tel.N" id="tel.N"
+            placeholder="Enter your telephone number"><br>
+        <label>Email</label><input type="email" Name="mail" id="mail" placeholder="Enter your email address"><br>
+        <label>Address</label><input type="address" Name="add" id="add" placeholder="Enter your address"><br>
+        <input type="submit" value="sumbit"><br>
+    </form>
+    <br>
+    <br>
+
+    <img src="IMG3.jpg" alt="sorry" height="90" width="100%" align="center">
+    <h1 align="center">Caresoft</h1>
+    <form>
+        <table border="1" autofocus bgcolor="skyblue" align="center" rules="all">
+            <tr>
+                <th>Employee id:</th>
+                <td><input type="text" Name="E.Id" id="E.id" placeholder="Enter your Employee id"></td>
+            </tr>
+            <tr>
+                <th rowspan="2">Telephone:</th>
+                <td><input type="text" Name="tel.N" id="tel.N" required="required" pattern="[0-9]{10}"
+                        placeholder="Enter your telephone number"></td>
+            </tr>
+            <tr>
+                <td><input type="tel" Name="tel.N" id="tel.N" placeholder="Enter your telephone number"></td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" Name="DOB" id="DOB" placeholder="Enter your bith date">
+                </td>
+            </tr>
+            <tr>
+                <td>Birth Time</td>
+                <td><input type="time" Name="time" id="time" placeholder="Enter your bith Time">
+                </td>
+            </tr>
+            <tr>
+                <td>Current age</td>
+                <td><input type="number" max="30" min="20" Name="age" id="age" placeholder="Enter your Age">
+                </td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td><input type="color" Name="color" id="color" placeholder="color">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Go"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

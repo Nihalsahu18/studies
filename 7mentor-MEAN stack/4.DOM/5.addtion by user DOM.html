@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function add() {
+        var x = document.getElementById("no1").value;
+        var y = document.getElementById("no2").value;
+        var z;
+        z = Number(x) + Number(y);
+        alert(z);
+        return z;
+    }
+
+    function sub() {
+        var x = document.getElementById("no1").value;
+        var y = document.getElementById("no2").value;
+        var z;
+        z = Number(x) - Number(y);
+        alert(z);
+        return z;
+    }
+</script>
+
+<body>
+    <input type="number" id="no1" placeholder="enter 1st number">
+    <input type="number" id="no2" placeholder="enter 2nd number">
+    <br>
+    <button onclick="add()">add</button>
+    <div id="z"></div>
+    <br>
+    <button onclick="sub()">sub</button>
+    <div id="z"></div>
+</body>
+
+</html>

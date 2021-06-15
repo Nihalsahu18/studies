@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Transition Property</title>
+        <style>
+            /* Transition Parameters(property-duration-function-delay) */
+
+            #div1{width: 100px;height: 100px;
+                  background-color: red;
+                  -webkit-transition: width 2s height 2s;   /*for browser support*/
+                  transition: width 2s height 2s ;}         /*width & height will increase with 2-2 sec*/
+            
+            #div1:hover{width: 200px;height: 200px;}/*width & height will increase in 2-2 sec with 200-200 width and height*/
+            
+            #div2{width: 100px;height: 100px;
+                  background-color: red;
+                  -webkit-transition: width 2s height 2s;/*for browser support*/
+                  transition: width 2s, height 2s ;}/*width & height will increase with 2-2 sec*/
+            
+            #div2:hover{width: 200px;height: 200px;}/*width & height will increase in 2-2 sec with 200-200 width and height*/
+            
+            #div3{width: 100px;height: 100px;
+                  background-color: blue;
+                /* transition-property(width/height),
+                transition-duration(in sec),
+                transition-timing-function(ease/linear/esae-in/ease-out/ease-in-out),
+                transition-delay(in sec)*/
+                -webkit-transition: width 2s linear 1s;/*for browser support*/
+                transition:height 2s  width 2s ease-in-out 1s;} /*Standard Syntax*/
+                
+            #div3:hover{height:500px;width: 500px;}/*width & height will increa se in 2-2 sec with 200-200 width and height*/
+           
+           #mydiv{background-color: chartreuse;
+                  width: 100px;height: 100px;
+                  -webkit-transition: width 2s linear 2s;
+                  transition: linear 5s;
+                  }
+            #mydiv:hover{width: 400px; }
+        </style>
+    </head>
+
+    <body>
+        <h1>Transition Property</h1>
+       <h2>Not Using Comma see the effect</h2>
+        <div id="div1">This is Not using ,</div>
+        <h2>Using Comma see the effect</h2>
+        <div id="div2">This is Using ,</div>
+        <!--Short Hand Property for transition-->
+        <h2>Using Shorthand Property Not Using Comma</h2>
+        <div id="div3">Using Transition All Properties</div><br><br><br>
+        <div id="mydiv"></div>
+      
+       
+    </body>
+</html>
+

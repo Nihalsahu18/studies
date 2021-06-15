@@ -1,0 +1,56 @@
+DOM in Javascript:
+    - Document Object Model.
+    - we will access, modify and update the UI.
+    - DOM use tree data structure.
+    -apply CSS & get info cal to return
+-------------------------------------------------------------------------
+ body UI-DOM- script(logic).
+
+ Document-<html></html>
+Element node- all the html tags body,div,p.. etc
+attribute node-
+        eg <a href="xyz.html">Click here</a>
+        href,src is an attribute node.
+text node-The text between the start tag & end tag is call it as text node.
+        e.g in above example is "Click here".
+
+---------------------------------------------------------------------------
+Ref Dom tree structure:
+http://w3schools.sinsixx.com/htmldom/dom_nodetree.asp.htm
+
+--------------------------------------------------------------------------
+**DOM Methods(Document)
+1>document.getElementById("")
+2>document.getElementByClassname("")
+3>document.getElementByTagname("")
+
+HTML DOM Methods
+x.getElementById(id) - get the element with a specified id
+x.getElementsByTagName(name) - get all elements with a specified tag name
+x.appendChild(node) - insert a child node to x
+x.removeChild(node) - remove a child node from x
+Note: In the list above, x is a node object (HTML element).
+
+------------------------------------------------------------------------------
+
+assginement********
+1.employee payment
+2.marksheet
+3. table by user input number
+
+------------------------------------------------------------------
+
+Function findfact(num)
+{}
+findfact(6)
+function add(fn,n1,n2)
+{
+        document.write(n1+n2);
+        document.write("after addition");
+        fn();
+}
+function msg()
+{
+        return "Hello all !";
+}
+add(msg,5,6)

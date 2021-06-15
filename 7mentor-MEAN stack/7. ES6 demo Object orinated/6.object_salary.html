@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function employee(eid, ename, bsal) {
+            this.eid = eid;
+            this.ename = ename;
+            this.bsal = bsal;
+            this.totalsal = function () {
+                var pf = this.bsal * 0.10;
+                var hra = this.bsal * 0.12;
+                var pt = this.bsal * 0.02;
+                var allo = this.bsal * 0.14;
+                this.bsal = this.sal + pf + hra + allo - pt;
+            }
+        }
+        var nihal = new employee(100, "nihal", "1000");
+        console.log(nihal);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

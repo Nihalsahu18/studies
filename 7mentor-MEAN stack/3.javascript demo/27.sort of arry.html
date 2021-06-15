@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // step of sort use by mycode
+    // 1.80,90,60,70
+    // 2.60,90,80,70
+    // 3.60,70,80,90
+    // 4.60,70,80,90
+    // 5.60,70,80,90
+    var a1 = [90, 80, 60, 70, 08, 81, 12, 15, 18];
+    var a2;
+    for (var i = 0; i < a1.length; i++) {
+      for (var j = i + 1; j < a1.length; j++) {
+        if (a1[j] < a1[i]) {
+          a2 = a1[j];
+          a1[j] = a1[i];
+          a1[i] = a2;
+        }
+      }
+      console.log("step" + i + " " + a1);
+    }
+    console.log("after sort" + a1);
+    document.write("<br>");
+    for (var y = 0; y < a1.length; y++) {
+      document.write(a1[y] + "<br>");
+    }
+  </script>
+</body>
+
+</html>

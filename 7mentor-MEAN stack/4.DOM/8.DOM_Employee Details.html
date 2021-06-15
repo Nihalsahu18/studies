@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc() {
+            var b1 = document.getElementById("sly").value;
+
+            var pf1 = b1 * 0.12;
+            var hra1 = b1 * 0.10;
+            var pt1 = b1 * 0.05;
+            var bsly = Number(b1) + Number(pf1) + Number(hra1) - Number(pt1);
+            document.getElementById("pf").innerHTML = pf1;
+            document.getElementById("hra").innerHTML = hra1;
+            document.getElementById("pt").innerHTML = pt1;
+            document.getElementById("tsly").innerHTML = bsly1;
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Employee Details</h1>
+    <table style="color:indigo ; background-color:skyblue; border:4px solid;" border="2px">
+        <tr>
+            <th>Enter Emp ID:</th>
+            <td><input type=" number" placeholder="Enter your Employee Id" />
+            </td>
+        </tr>
+        <tr>
+            <th>Enter Emp Name:</th>
+            <td><input type="text" placeholder="Enter your Name" /></td>
+        </tr>
+        <tr>
+            <th>Enter Emp Post:</th>
+            <td><input type="text" placeholder="Enter your Post" /></td>
+        </tr>
+        <tr>
+            <th>Enter your Baisc Salary:</th>
+            <td><input id="sly" type="number" placeholder="Enter your basic salary" /></td>
+        </tr>
+        <tr>
+            <th>PF(12% of B.S):</th>
+            <td>
+                <div id="pf"></div>
+            </td>
+        </tr>
+        <tr>
+            <th>HRA(10% of B.S):</th>
+            <td>
+                <div id="hra"></div>
+            </td>
+        </tr>
+        <tr>
+            <th>Proff. Tax(5% of B.S):</th>
+            <td>
+                <div id="pt"></div>
+            </td>
+        </tr>
+        <tr>
+            <th>Net sal(baisc+PF+HRA+PT):</th>
+            <td>
+                <div id="tsly"></div>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="calc()" style="background-color: red;">Click</button>
+</body>
+
+</html>

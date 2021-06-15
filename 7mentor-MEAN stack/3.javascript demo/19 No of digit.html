@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var numb = prompt("enter your number");
+        // var digit = 1;
+        // var org = numb;
+        // while (numb > 10) {
+        //     numb = (numb / 10);
+        //     digit++;
+        //     document.write("the" + digit+"<br>");
+        // }
+        // document.write("the number of digits in your number: " + org + " is " + digit);
+
+        document.write("*******************************************<br>");
+        document.write("*******************************************<br>");
+        var numb = prompt("enter your number");
+        var digit = 0;
+        var org = numb;
+        while (numb >= 1) {
+            numb = (numb / 10);
+            digit++;
+            console.log(digit)
+        }
+        document.write("the number of digits in your number: " + org + " is " + digit);
+    </script>
+</body>
+
+</html>

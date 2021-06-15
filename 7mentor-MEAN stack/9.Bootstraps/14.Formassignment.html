@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap-theme.css">
+    <script src="bootstrap-3.4.1-dist/js/jquery-1.9.1.js"></script>
+    <script src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <style>
+        .bs-example {
+            margin: 20px;
+            background-color: lightpink;
+
+        }
+
+        form {
+            background-color: lightslategrey;
+
+            margin: 10px;
+
+        }
+
+        input {
+            background-color: lime;
+        }
+
+        label {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bs-example">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputName" class="control-label col-xs-2">Name</label>
+                <div class="col-xs-10">
+                    <p class="form-control-static">Nihal sahu</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputemail" class="control-label col-xs-2">Email</label>
+                <div class="col-xs-10">
+                    <input type="email" class="form-control" id="inputemail" placeholder="Enter your email id">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputpass" class="control-label col-xs-2">Password</label>
+                <div class="col-xs-10">
+                    <input type="password" class="form-control" id="inputpass" placeholder="Enter your New password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox">Remember me
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>

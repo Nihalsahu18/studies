@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function my() { // declare function
+            // x is new variable for storing new values for first paragraph
+
+            var x = document.getElementsByClassName("text"); // taking element by class
+            // document.write(x.length);
+            for (let i = 0; i < x.length; i++) {
+                if (i % 2 == 0) {
+                    x[i].style.backgroundColor = "red";
+                    x[i].style.color = "white";
+                } else {
+                    x[i].style.backgroundColor = "blue";
+                    x[i].style.color = "black";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="my()">Press Me</button>
+    <p class="text">This is my First Paragraph</p>
+    <p class="text">This is my second Paragraph</p>
+    <p class="text">This is my third Paragraph</p>
+    <p class="text">This is my fourth Paragraph</p>
+    <p class="text">This is my fifth Paragraph</p>
+
+</body>
+
+</html>

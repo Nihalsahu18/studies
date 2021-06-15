@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <title></title>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            border: 2px solid red;
+            background-color: yellow;
+        }
+
+        #div2 {
+            width: 300px;
+            height: 100px;
+            border: 2px solid black;
+            background-color: yellow;
+            transform: translate(50px 50px);
+            /* Standard syntax */
+            -ms-transform: translate(50px, 100px);
+            /* Browser support */
+            -webkit-transform: translate(50px, 50px);
+        }
+
+        /* Browser support */
+
+        #div3 {
+            width: 300px;
+            height: 100px;
+            border: 2px solid red;
+            background-color: yellow;
+            transform: rotate(10deg);
+            /* Normal syntax */
+            -ms-transform: rotate(10deg);
+            /* IE 9 */
+            -webkit-transform: rotate(10deg);
+            /* Safari prior 9.0 */
+        }
+
+        #div4 {
+            width: 300px;
+            height: 100px;
+            border: 2px solid red;
+            background-color: yellow;
+            transform: rotate(-10deg);
+            /* Normal syntax */
+            -ms-transform: rotate(-10deg);
+            /* IE 9 */
+            -webkit-transform: rotate(-10deg);
+            /* Safari prior 9.0 */
+        }
+
+        #div5 {
+            width: 300px;
+            height: 100px;
+            border: 2px solid red;
+            background-color: yellow;
+            /* We have ScaleX and ScaleY for horizontal & Vertical */
+            /*first value denotes horizontal scale & second denotes vertical scale*/
+            transform: scale(0.5, 0.5);
+            /* Normal syntax */
+            -ms-transform: scale(0.5, 0.5);
+            /* IE 9 */
+            -webkit-transform: scale(0.5, 0.5);
+            /* Safari prior 9.0 */
+        }
+
+        #div6 {
+            width: 300px;
+            height: 100px;
+            border: 2px solid red;
+            background-color: yellow;
+            /* We have SkewX and SkewY for horizontal & Vertical */
+            /*first value denotes horizontal scale & second denotes vertical scale*/
+            transform: Skew(10deg, 10deg);
+            /* Normal syntax */
+            -ms-transform: skew(10deg, 10deg);
+            /* IE 9 */
+            -webkit-transform: skew(10deg, 10deg);
+            /* Safari prior 9.0 */
+        }
+
+        #div7 {
+            /*The parameters are matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())*/
+            -ms-transform: matrix(1, -0.3, 0, 1, 0, 0);
+            /* IE 9 */
+            -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);
+            /* Safari prior 9.0 */
+            transform: matrix(1, -0.3, 0, 1, 0, 0);
+        }
+
+        /* Standard syntax */
+    </style>
+</head>
+
+<body>
+    <h1>This is Normal </h1>
+    <div>Hello Good Morning</div>
+    <h1>This is Transform Translate</h1>
+    <div id="div2">Hello Good Afternoon</div><br><br>
+    <h1>This is Transform Rotate with 10 Degree with Anti clock wise</h1>
+    <div id="div3">Hello Good Afternoon</div><br><br>
+    <h1>This is Transform Rotate with 10 Degree with clock wise</h1>
+    <div id="div4">Hello Good Afternoon</div>
+    <h1>This is Transform Scale</h1><br><br>
+    <div id="div5">Hello Good Afternoon</div>
+    <h1>This is Transform Skew</h1><br><br>
+    <div id="div6">Hello Good Afternoon</div>
+    <h1>This is Matrix(Shorthand of 2dTransform Property)</h1><br><br>
+    <div id="div7">Hello Good Afternoon</div>
+</body>
+
+</html>

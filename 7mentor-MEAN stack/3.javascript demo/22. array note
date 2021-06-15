@@ -1,0 +1,27 @@
+Array in Javascript:
+
+`It is use to stored the mutiple values.
+`processing of data is very easy by using array.(for loop)
+`array element is access by [] notation.
+`array index is always start with zero.0
+`length property to find the array length
+var arr=[12,24,56,78,90]
+arr[0]=12,arr[1]=24,arr[2]=56
+e.g
+for( var i=0;i<arr.length;i++)
+{document.write(arr[i]+"<br>");
+Sum=sum+arr[i];}
+var names=['nihal','anshul','jain']
+
+
+program list*************************************
+array assignment ********************************
+1. find the maximum element from the array
+2. find the mini element from tha array
+3. find the addtion of even position element in an array.
+e.g 12  45  67  78  23  50
+    0   1   2   3   4   5
+
+4. sort the array in an ascending order.
+
+*****************************************************+

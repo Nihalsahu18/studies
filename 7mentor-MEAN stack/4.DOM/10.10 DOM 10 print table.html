@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Table of given number</title>
+  </head>
+  <script>
+    function table() {
+      var num = document.getElementById("num").value;
+      var str = " ";
+      str = "<table border = 5>";
+      for (var i = 1; i <= 10; i++) {
+        str = str + "<tr><td>";
+        str = str + num * i;
+        str = str + "</td></tr>";
+      }
+      str = str + "</table>";
+      document.getElementById("table").innerHTML = str;
+    }
+  </script>
+  <body>
+    <h1>Table of given number</h1>
+    Enter Number : <input type="number" id="num" size="1" />
+    <button onclick="table()">Print</button>
+    <div id="table"></div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function pyramid(num) {
+            let m = num;
+            let y = num;
+            let x = 0;
+            for (let i = 0; i <= num; i++) {
+                for (let j = 0; j <= m; j++) {
+                    document.write("&nbsp");
+                }
+                for (let k = 0; k < i; k++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+                m--;
+            }
+
+            for (let i = 0; i <= num; i++) {
+                // document.write("&nbsp");
+                for (let j = 0; j <= x; j++) {
+                    document.write("&nbsp");
+                }
+                for (let k = 0; k < y; k++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+                x++;
+                y--;
+            }
+
+
+        }
+        pyramid(4)
+    </script>
+</body>
+
+</html>

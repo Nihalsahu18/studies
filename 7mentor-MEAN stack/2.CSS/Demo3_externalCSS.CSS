@@ -1,0 +1,32 @@
+p {
+    color: red;
+    background-color: aqua;
+}
+
+h1 {
+    color: cyan
+}
+
+h2 {
+    background-color: darkkhaki;
+}
+
+h3 {
+    color: whitesmoke;
+    background-color: black;
+}
+
+h4 {
+    font-style: bold;
+    font-family: sans-serif;
+}
+
+h5 {
+    background-image: url(hori.img);
+    text-shadow: chartreuse;
+    text-align: center;
+}
+
+h6 {
+    text-decoration: overline;
+}

@@ -1,0 +1,3 @@
+Hi
+sample text file 
+Reading demo using ajax

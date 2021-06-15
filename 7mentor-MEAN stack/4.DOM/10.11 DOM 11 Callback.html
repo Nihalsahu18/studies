@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Call Back</title>
+  </head>
+  <script>
+    // function msg() {
+    //   return "Hello all ";
+    // }
+    var msg = function () {
+      return "Hi . . . .";
+    };
+    function add(fn, n1, n2) {
+      document.write("Addition is " + (n1 + n2));
+      var m = fn();
+      document.write("<br> After addition " + m);
+    }
+    add(msg, 5, 7);
+  </script>
+  <body>
+    <h1>Demo for call back function !</h1>
+  </body>
+</html>

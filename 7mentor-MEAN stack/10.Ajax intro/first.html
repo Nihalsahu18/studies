@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+    if (window.XMLHttpRequest || window.ActiveXObject) {
+        if (window.ActiveXObject) {
+            try {
+                console.log("in try")
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch(exception) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        } else {
+            console.log("in else")
+            xhr = new XMLHttpRequest(); 
+        }
+    } else {
+        alert("Your browser does not support XMLHTTP Request...!");
+    }
+</script>
+</head>
+<body>
+    hi
+</body>
+</html>

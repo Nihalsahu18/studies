@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // find the factorial of a number
+        var num = prompt("enter the number you want factorial");
+        var fact = 1;
+        while (num >= 1) {
+            fact = fact * num;
+            num--;
+        }
+        document.write("the factorial of the number =" + fact);
+        document.write("*******************************************<br>");
+
+
+        for (var num = prompt("enter the number you want factorial"), fac = 1; num > 1; num--) {
+            fac = fac * num;
+            document.write("the factorial of the number =" + fac);
+        }
+        document.write("*******************************************<br>");
+        document.write("the factorial of the number =" + fac);
+        document.write("*******************************************<br>");
+        document.write(fac);
+    </script>
+</body>
+
+</html>

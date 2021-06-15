@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#hidebtn').click(function () {
+                $(".c1").hide();
+            })
+            $('#showbtn').click(function () {
+                $(".c1").show();
+            })
+            $('#showhide').click(function () {
+                $("p").toggle();
+
+            })
+        })
+    </script>
+</head>
+
+<body onload="">
+    <h1>jquery let get started</h1>
+    <p class="c1">This is my First paragrapgh</p>
+    <p class="c1">This is my second paragrapgh</p>
+    <p>This is my Thrid paragrapgh</p>
+    <button id="hidebtn">Hide para</button><br>
+    <button id="showbtn">Show para</button>
+    <button id="showhide">Show hide</button>
+</body>
+
+</html>

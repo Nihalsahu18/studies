@@ -1,0 +1,26 @@
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Canvas</title>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            //drawing text on canvas
+            context.font = "bold 32px Arial";
+            context.fillText("Hello World!", 50, 100);
+
+            //set color text color and alinement
+            context.font = "bold 32px Arial";
+            context.textAlign = "center";
+            context.textBaseline = "middle";
+            context.fillStyle = "orange";
+            context.fillText("Hello World!", 150, 100);
+        };
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+
+</html>

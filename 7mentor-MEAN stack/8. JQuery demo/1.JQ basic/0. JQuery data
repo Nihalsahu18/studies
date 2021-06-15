@@ -1,0 +1,58 @@
+Why Jquery??
+-open source,lib.
+-Rapid development.
+-server side 
+-lightweight,cross browser & css3.0.
+-support AJAX capabilties,event handling,animation effects.
+-wide range of plug-in availabe.
+
+**********************************************
+JQuery Syntax:
+$(html element or selector).action()
+selector-  To find HTML element(s)
+action()- Action to be performed on the element(s).
+e.g $("p")
+    $("#p1")    -ID 
+    $(".test") -class
+e.g 
+$(this).hide()      -hides the current element
+$("p").hide()       -hides all element with class="test"
+$(".test").remove() -removes all the elements with class="test"
+$("#test").remove() -removes the element with id="test"
+
+doucument.getElementbyId("").value
+Document.getElementbyTagname("p")
+
+
+<script>
+$("p").hide()
+</script>
+ready event=doucument
+<script>
+    $(doucument).ready(function(){
+        $("p").hide();
+    })
+</script>
+
+*****************************************
+Its prevents any jQuery code from running before the doucment is finshed.
+**************************************
+Callback function
+
+Callback is a refernce to excecutable code, or a piece of excutable code,
+that is passed an argurment to the other function.
+
+*****************************************************
+DOM in JQuery
+
+doucment.
+$().
+
+text()-Sets or returns the text content of selected elements.
+Val()-Sets or returns the value of form fields
+attr()-It is used to set or change attribute values.
+append()-Inserts content at the end of the selected element.
+prepend()-Inserts content at the starrt of the selected element.
+remove()-Removes the selected element(and its child element).
+
+*******************************************************************

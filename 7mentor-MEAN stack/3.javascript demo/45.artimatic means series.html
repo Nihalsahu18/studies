@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = prompt('enter the first term in the sequence');
+        var n = prompt('no of terms you want');
+        var d = prompt('Enter the differences');
+        for (var i = 1, s; i <= n; i++) {
+            s = (Number(a) + ((i - 1) * d));
+            document.write(s + "<br>")
+        }
+    </script>
+</body>
+
+</html>

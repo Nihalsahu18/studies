@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dispTime() {
+            var current = new Date();
+            var hh = current.getHours();
+            if (hh < 10)
+                hh = "0" + hh;
+            var mm = current.getMinutes();
+            if (mm < 10)
+                mm = "0" + mm;
+            var ss = current.getSeconds();
+            if (ss < 10)
+                ss = "0" + ss;
+            var str = hh + ":" + mm + ":" + ss;
+            document.getElementById("time").innerHTML = str;
+            f = setTimeout(function () {
+                dispTime()
+            }, 3000);
+        }
+
+        function stopClock() {
+            clearTimeout(f);
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="dispTime()">Current time</button>
+    <button onclick="stopClock()">Stop clock</button>
+</body>
+
+</html>

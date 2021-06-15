@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			background: #8080FF;
+		}
+
+		.c1 {
+			background: grey;
+			height: 41px;
+		}
+
+		.s1 {
+			margin-left: 10px;
+			margin-top: 10px;
+			padding-top: 5px;
+			float: left;
+			height: 25px;
+			width: 100px;
+			background: gainsboro;
+			text-align: center;
+			color: blue;
+			font-weight: bold;
+			border-top: 1px solid red;
+			border-left: 1px solid red;
+			border-right: 1px solid red;
+			border-radius: 10px 10px 0px 0px;
+		}
+
+		.s2 {
+			margin-left: 10px;
+			margin-top: 10px;
+			padding-top: 5px;
+			float: left;
+			height: 25px;
+			width: 100px;
+			background: darkgray;
+			color: black;
+			text-align: center;
+			border-radius: 10px 10px 0px 0px;
+			border: none;
+			color: red;
+		}
+
+		.container {
+			height: 400px;
+			border-bottom: 5px solid gray;
+			border-left: 5px solid gray;
+			border-right: 5px solid gray;
+			background: gainsboro;
+		}
+
+		#video {
+			float: left;
+			margin-top: 20px;
+			margin-left: 55px;
+			height: 340px;
+			width: 400px;
+		}
+
+		#description {
+			float: left;
+			margin-top: 82px;
+			margin-left: 55px;
+			height: 280px;
+			width: 420px;
+			background: gray;
+			border-radius: 20px;
+			padding-top: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-size: 18px;
+		}
+
+		fieldset {
+			background: orange;
+		}
+
+		legend {
+			color: red;
+		}
+
+		.s3 {
+			display: none;
+		}
+	</style>
+	<link rel="stylesheet" href="jquery-ui.css" />
+	<script src="jquery-1.9.1.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#sec1').css({
+				'background': 'gainsboro'
+			}).addClass('s1');
+			$('#sec2').css({
+				'background': 'darkgray'
+			}).addClass('s2');
+			$('#sec3').css({
+				'background': 'darkgray'
+			}).addClass('s2');
+			$('section').click(function () {
+				var id = $(this).attr('id');
+				if (id == 'sec1') {
+					$('#sec1').css({
+						'background': 'gainsboro'
+					}).removeClass('s2').addClass('s1');
+					$('#sec2').css({
+						'background': 'darkgray'
+					}).removeClass('s1').addClass('s2');
+					$('#sec3').css({
+						'background': 'darkgray'
+					}).removeClass('s1').addClass('s2');
+					$('video').attr({
+						src: 'v2.mp4',
+						height: '290px',
+						width: '400px'
+					});
+					$('#video').find('b').text('jQuery Core');
+					$('#description').empty();
+					$("<fieldset> <legend>Description</legend> <ul><li>Control the Document Appearance & Content</li><br><li>Control the Browser</li><br><li>Interact with HTML Forms</li><br><li>Interact with users</li><br><li>Clien-side validation </li></ul> </fieldset>")
+						.appendTo('#description').addClass('s3').show('clip', 1000);
+				}
+				if (id == 'sec2') {
+					$('#sec1').css({
+						'background': 'darkgray'
+					}).removeClass('s1').addClass('s2');
+					$('#sec2').css({
+						'background': 'gainsboro'
+					}).removeClass('s2').addClass('s1');
+					$('#sec3').css({
+						'background': 'darkgray'
+					}).removeClass('s1').addClass('s2');
+					$('video').attr({
+						src: 'v1.mp4',
+						height: '290px',
+						width: '400px'
+					});
+					$('#video').find('b').text('jQuery UI');
+					$('#description').empty();
+					$("<fieldset> <legend>Description</legend> <ul><li>Control the Document Appearance & Content</li><br><li>Control the Browser</li><br><li>Interact with HTML Forms</li><br><li>Interact with users</li><br><li>Clien-side validation </li></ul> </fieldset>")
+						.appendTo('#description').addClass('s3').show('slide', 1000);
+				}
+				if (id == 'sec3') {
+					$('#sec1').css({
+						'background': 'darkgray'
+					}).removeClass('s1').addClass('s2');
+					$('#sec2').css({
+						'background': 'darkgray'
+					}).removeClass('s1').addClass('s2');
+					$('#sec3').css({
+						'background': 'gainsboro'
+					}).removeClass('s2').addClass('s1');
+					$('video').attr({
+						src: 'v2.mp4',
+						height: '290px',
+						width: '400px'
+					});
+					$('#video').find('b').text('Creating Web Sites');
+					$('#description').empty();
+					$("<fieldset> <legend>Description</legend> <ul><li>Control the Document Appearance & Content</li><br><li>Control the Browser</li><br><li>Interact with HTML Forms</li><br><li>Interact with users</li><br><li>Clien-side validation </li></ul> </fieldset>")
+						.appendTo('#description').addClass('s3').show('clip', 1000);
+				}
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<div class='c1'>
+		<section id='sec1' title='jQuery Core'>Chapter1</section>
+		<section id='sec2' title='jQuery UI'>Chapter2</section>
+		<section id='sec3' title='Web Site Creation'>Chapter3</section>
+	</div>
+	<div class='container' id='container'>
+		<section id='video'><br>
+			<b style='color:red;font-size:20px;'>jQuery Core</b><br><br>
+			<video autoplay='autoplay' controls='controls' height='290' width='400'>
+				<source src='v2.mp4' type='video/mp4'>
+			</video>
+		</section>
+		<section id='description'>
+			<fieldset>
+				<legend>Description</legend>
+				<ul>
+					<li>Control the Document Appearance & Content</li><br>
+					<li>Control the Browser</li><br>
+					<li>Interact with HTML Forms</li><br>
+					<li>Interact with users</li><br>
+					<li>Clien-side validation</li>
+				</ul>
+			</fieldset>
+		</section>
+	</div>
+</body>
+
+</html>

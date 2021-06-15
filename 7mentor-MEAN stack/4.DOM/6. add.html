@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        function ad() {
+            var x = document.getElementById("n1").Value;
+            var y = document.getElementById("n2").Value;
+            var z;
+            z = Number(x) + Number(y);
+            alert(z);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="n1" placeholder="Enter 1st Number">
+    <br>
+    <input type="number" id="n2" placeholder="Enter 2nd Number">
+    <br>
+    <button onclick="ad()">=</button>
+</body>
+
+</html>

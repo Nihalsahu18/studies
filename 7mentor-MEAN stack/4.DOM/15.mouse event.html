@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            border: 5px black solid;
+            padding-left: 30;
+            height: 50px;
+            width: 400px;
+            background-color: chartreuse;
+            font-size: 30px;
+        }
+
+        #div2 {
+            border: 5px red solid;
+            padding-left: 30;
+            height: 50px;
+            width: 400px;
+            background-color: skyblue;
+            font-size: 30px;
+        }
+    </style>
+    <script>
+        function mouseover(x) {
+            x.innerHTML = "mouse Over Event Occur";
+            x.style.cursor = "pointer";
+        }
+
+        function mouseout(y) {
+            y.innerHTML = "Mouse out Event Occur";
+        }
+
+        function mousedown(x) {
+            x.style.background = "red";
+        }
+
+        function mouseup(y) {
+            y.style.background = "blue"
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1" onmouseover="mouseover(this)" onmouseout="mouseout(this)">
+        <b>Hello</b></div>
+    <br>
+    <div id="div2" onmousedown="mousedown(this)" onmouseup="mouseup(this)">
+        <b> Hi ....</b></div>
+</body>
+
+</html>

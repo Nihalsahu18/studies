@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <script>
+        function person(fnm, lnm, email, age) {
+            this.firstname = fnm;
+            this.lastname = lnm;
+            this.email = email;
+            this.age = age;
+        }
+        var myfather = new person("mad", "chaudhary", "mad@gmail.com", 75);
+        console.log(myfather);
+
+        var mymother = new person("anjali", "chaudhary", "anj@gmail.com", 66);
+
+        document.getElementById("p1").innerHTML = "my father age is " + myfather.age + "<br> ";
+    </script>
+</body>
+
+</html>

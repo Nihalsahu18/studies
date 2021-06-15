@@ -1,0 +1,19 @@
+<html>
+<script src="lib/jquery.min.js">
+</script>
+<script>
+	$(document).ready(function () {
+		$("button").click(function () {
+			$("#p1").css({
+				'font-size': '10 px',
+				'color': 'red',
+				'background': 'yellow'
+			}).slideUp(500).slideDown(500);
+
+		})
+	});
+</script>
+<button>Click me</button>
+<p id="p1">Majical jQuery</p>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <script src="../js/jquery-3.1.1.slim.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap-theme.css">
+  <script src="bootstrap-3.4.1-dist/js/jquery-1.9.1.js"></script>
+  <script src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+  <style>
+    /* Style to reverse the caret icon from pointing downwards to upwards */
+    .caret.caret-up {
+      border-top-width: 0;
+      border-bottom: 4px solid #fff;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $("#d1").on("hide.bs.dropdown", function () {
+        $("#bttn").html('Page 3 <span class="caret"></span>');
+      });
+      $("#d1").on("show.bs.dropdown", function () {
+        $("#bttn").html('Page 3 <span class="caret caret-up"></span>');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Page 2</a></li>
+        <li class="dropdown" id="d1">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bttn">Page 3
+            <span class="caret"></span>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1-1</a></li>
+              <li><a href="#">Page 1-2</a></li>
+              <li><a href="#">Page 1-3</a></li>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</body>
+
+</html>

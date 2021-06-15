@@ -1,0 +1,27 @@
+Javascript Function:
+    <script>....</script> uptill now anonymous block 
+    -we will write a name block code. which can be call as an when it is required. 
+        i.e Function use for reusability of code.
+    -It is use for managing the code in the project.
+
+    syntax:
+        function fun_name(arg1,arg2..argn)
+        {
+            return       //if your fuction is returning the value.
+        }
+    e.g function addtwo(n1,n2)
+        {
+            retun n1+n2;
+        }
+        sum=addtwo(5,7);  //while using return we need to use catch value(sum)//
+        document.write(sum); //printing it on the screen//
+        console.log(sum);   //we use inspect and see it on console tab of browser//
+
+ assnigment********************************************* 
+ 1.write js program using function to find avg of three numbers.
+ 2. write JS program using function to check number of words in string.
+    e.g var count=wordcount("hi this is a js session of function concept)
+        var count;
+        for(var i=0;i<str.length;i++)
+        {if(str[i]===' ')
+        count++}      

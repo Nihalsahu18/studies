@@ -1,0 +1,95 @@
+<html>
+
+<head>
+	<script type="text/javascript" src="jquery-1.9.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".accordion").find('p').eq(2).show(); //default visibility
+			$("h3").click(function () {
+				$(this).next("p").slideDown("slow").siblings("p:visible").slideUp("slow");
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		body {
+			margin: 10px auto;
+			width: 500px;
+			font-family: calibri;
+		}
+
+		.accordion {
+			width: 480px;
+			border-bottom: 1px solid black;
+		}
+
+		.accordion h3 {
+			background: #c4c4c4;
+			padding: 5px 10px;
+			margin: 0;
+			border: 1px solid black;
+			border-bottom: none;
+			cursor: pointer;
+			color: Blue;
+		}
+
+		.accordion h3:hover {
+			background-color: darkgrey;
+		}
+
+		.accordion p {
+			background: white;
+			margin: 0px;
+			padding: 10px 15px 20px;
+			border-left: 1px solid black;
+			border-right: 1px solid black;
+			display: none;
+		}
+
+		.accordion b {
+			font-family: monotype corsiva;
+			font-weight: none;
+			font-size: 20px;
+			color: green;
+		}
+
+		.accordion i {
+			font-weight: none;
+			font-size: 18px;
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="accordion">
+		<h3>Personal Details</h3>
+		<p>
+			<b>Name</b> :: <i>Jayshree Anant Chaudhary</i><br>
+			<b>Date Of Borth</b> :: <i>10 Aug,1980</i><br>
+			<b>Address</b> :: <i>At/Pt Nasik </i>
+		</p>
+		<h3>Education Details</h3>
+		<p>
+			<b>10<sup>th </sup>Class</b> :: <i>Pune University, Nasik</i><br>
+			<b>12<sup>th </sup>Class</b> :: <i>Pune University, Nasik</i><br>
+			<b>B.C.S</b> :: <i>Pune University, Nasik</i><br>
+			<b>M.C.S</b> :: <i>Pune University, Nasik</i>
+		</p>
+		<h3>Professional Details</h3>
+		<p>
+			<b>Faculty[Java,Full stack]</b> :: <i>Seed Infotech ,Pune</i><br>
+			<b>Full Stack Trainer</b> :: <i>Seven Mentor Pune</i>
+		</p>
+		<h3>Contact Details</h3>
+		<p>
+			<b>Call on</b> :: <i>9881134172</i><br>
+			<b>Email</b> :: <i>chaudhary.jaya1008@gmail.com</i><br>
+			<b>Website</b> :: <i><a href='http://meetjayshree.com'>meetjayshree.com</i></a>
+		</p>
+	</div>
+
+</body>
+
+</html>

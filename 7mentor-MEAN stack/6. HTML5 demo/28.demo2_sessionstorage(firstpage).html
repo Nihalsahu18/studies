@@ -1,0 +1,13 @@
+<html>
+<i id='msg'> First name will be displayed here when you will click below button </i><br><br>
+<a href="27.demo2_sessionstorage(anotherpage).html">Another Page</a><br><br>
+<script language='javascript'>
+	if (window.sessionStorage) {
+		sessionStorage.setItem('fname', 'Jayshree');
+		document.getElementById('msg').innerHTML = "Hello " + sessionStorage.getItem('fname');
+	} else {
+		document.getElementById('msg').innerHTML = "your browser doesn't support these , kindly update your browser";
+	}
+</script>
+
+</html>

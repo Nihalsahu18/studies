@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<script src="lib/jquery.min.js">
+	</script>
+	<script>
+		$(document).ready(function () {
+			$("#b1").click(function () {
+				$("div").animate({
+					right: '+=250px',
+					height: '200px',
+					width: '200px'
+				});
+			})
+			$("#b2").click(function () {
+				$("div").animate({
+					left: '200',
+					height: '20px',
+					width: '20px'
+				});
+			})
+		})
+	</script>
+	<style>
+		div {
+			position: relative;
+		}
+	</style>
+</head>
+
+<body>
+	<button id="b1">Start Animation</button>
+	<button id="b2">Start Animation</button>
+	<div style="background:aqua;height:100px;width:100px;position:absolute;">
+	</div>
+</body>
+
+</html>

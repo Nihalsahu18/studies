@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr1 = [10, 20, 30, 40, 50, 60, 70, 80];
+        var sum = 0;
+        for (var x = 0; x < arr1.length; x++) {
+            document.write(arr1[x] + "<br>");
+        }
+        document.write("****************<br>");
+        // for (var i = 0, sum = 0; i < arr1.length;) {
+        //     sum = sum + arr[i];
+        //     i = i + 2;
+        //     console.log(sum);
+        //     document.write(sum + "<br>");
+        // }
+        for (var i = 0; i < arr1.length; i++) {
+            if (i % 2 === 0) {
+                sum = sum + arr1[i];
+            }
+        }
+        document.write(sum + "<br>");
+    </script>
+</body>
+
+</html>

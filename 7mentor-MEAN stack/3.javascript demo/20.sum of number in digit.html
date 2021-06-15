@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var n = prompt("enter the number");
+        var sum = 0;
+        var rem;
+        var t = n;
+        while (t != 0) {
+            rem = t % 10;
+            sum = sum + rem;
+            t = parseInt(t / 10);
+            console.log(sum)
+        }
+        document.write("the sum of digits in your number: " + n + " is " + sum);
+        document.write("<br>**********************************");
+    </script>
+</body>
+
+</html>

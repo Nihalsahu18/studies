@@ -1,0 +1,137 @@
+<html>
+<script src="jquery-1.9.1.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+	$(document).ready(function () {
+		$('#html').mouseenter(function () {
+			$(this).addClass('style1');
+			$('.presentation').empty();
+			$("<fieldset><legend>HTML</legend><ul><li>HTML stands for hypertext markup language</li><br><li>It is a language for describing web pages</li><br><li>It uses markup tags to describe web pages</li><br><li>It is not a programming language, it is a markup language</li><br><li>A markup language is a set of markup tags</li></ul></fieldset>")
+				.appendTo('.presentation').addClass('style2').show('fold', 1000);
+		})
+		$('#html').mouseleave(function () {
+			$(this).removeClass('style1');
+		})
+		$('#css').mouseenter(function () {
+			$(this).addClass('style1');
+			$('.presentation').empty();
+			$("<fieldset><legend>CSS</legend><ul><li>CSS stands for Cascading Style Sheets</li><br><li>Styles define how to display HTML elements</li><br><li>In addition to setting a style for a HTML element,<br>CSS allows you to specify your own selectors called id and class</li></ul></fieldset>")
+				.appendTo('.presentation').addClass('style2').show('shake', 1000);
+		})
+		$('#css').mouseleave(function () {
+			$(this).removeClass('style1');
+
+		})
+		$('#js').mouseenter(function () {
+			$(this).addClass('style1');
+			$('.presentation').empty();
+			$("<fieldset><legend>JacaScript</legend><ul><li>Control the Document Appearance & Content</li><br><li>Control the Browser</li><br><li>Interact with HTML Forms</li><br><li>Interact with users</li><br><li>Clien-side validation</li></ul></fieldset>")
+				.appendTo('.presentation').addClass('style2').show('highlight', 1000);
+		})
+		$('#js').mouseleave(function () {
+			$(this).removeClass('style1');
+		})
+		$('#html5').mouseenter(function () {
+			$(this).addClass('style1');
+			$('.presentation').empty();
+			$("<fieldset><legend>HTML5</legend><ul><li>It allow user to add multimedia on web page</li><br><li>New tags and attributes to avoid writing JavaScript code</li><br><li>HTML 5 provides new elements that can be used for better structure,multimedia support, and <br>better form handling which makes easy internet <br>use</li></ul></fieldset>")
+				.appendTo('.presentation').addClass('style2').show('slide', 1000);
+		})
+		$('#html5').mouseleave(function () {
+			$(this).removeClass('style1');
+		})
+		$('#css3').mouseenter(function () {
+			$(this).addClass('style1');
+			$('.presentation').empty();
+			$("<fieldset><legend>CSS3</legend><ul><li>Box Model</li><br><li>Borders and Animations</li><br><li>Text Effects</li><br><li>2D/3D Transformations</li><br><li>Multiple Column Layout</li></ul></fieldset>")
+				.appendTo('.presentation').addClass('style2').show('fold', 1000);
+		})
+		$('#css3').mouseleave(function () {
+			$(this).removeClass('style1');
+		})
+		$('#jquery').mouseenter(function () {
+			$(this).addClass('style1');
+			$('.presentation').empty();
+			$("<fieldset><legend>jQuery</legend><ul><li>It is a library of JavaScript functions</li><br><li>Write less, Do more JavaScript library</li><br><li>JavaScript Effects and animations</li><br><li>HTML DOM traversal and modification</li></ul></fieldset>")
+				.appendTo('.presentation').addClass('style2').show('highlight', 1000);
+		})
+		$('#jquery').mouseleave(function () {
+			$(this).removeClass('style1');
+		})
+	})
+</script>
+<style>
+	body {
+		background: url('img1.jpg');
+		background-size: 100% 100%;
+	}
+
+	marquee {
+		color: Green;
+		margin-top: 10px;
+		font-weight: bold;
+		font-size: 30px;
+		font-family: 'Monotype Corsiva';
+	}
+
+	.subjects {
+		float: left;
+		margin-top: 80px;
+		margin-left: 100px;
+		color: red;
+		list-style-type: none;
+		font-weight: bold;
+		font-size: 30px;
+	}
+
+	.presentation {
+		float: left;
+		height: 350px;
+		width: 500px;
+		background: black;
+		margin-top: 90px;
+		margin-left: 20px;
+		border: 5px solid purple;
+		border-radius: 0px 70px;
+		box-shadow: 10px 10px 2px darkgreen;
+		font-size: 20px;
+		color: pink;
+		padding: 20px;
+	}
+
+	.style1 {
+		color: green;
+		text-shadow: 2px 2px 2px black;
+	}
+
+	.style2 {
+		display: none;
+	}
+</style>
+
+<body>
+	<marquee scrollamount='7' behavior='alternate'>Learrning Web Programming at Seven Mentor</marquee>
+	<hr>
+	<ul class='subjects'>
+		<li id='html'> HTML </li><br>
+		<li id='css'> CSS </li><br>
+		<li id='js'> JavaScript </li><br>
+		<li id='html5'> HTML5 </li><br>
+		<li id='css3'> CSS3 </li><br>
+		<li id='jquery'> jQuery </li><br>
+	</ul>
+	<div class='presentation' id='presentation'>
+		<fieldset>
+			<legend>HTML</legend>
+			<ul>
+				<li>HTML stands for hypertext markup language</li><br>
+				<li>It is a language for describing web pages</li><br>
+				<li>It uses markup tags to describe web pages</li><br>
+				<li>It is not a programming language, it is a markup language</li><br>
+				<li>A markup language is a set of markup tags</li>
+			</ul>
+		</fieldset>
+	</div>
+</body>
+
+</html>

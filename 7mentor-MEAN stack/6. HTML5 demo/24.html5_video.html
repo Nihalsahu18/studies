@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var myvideo = document.getElementById("video");
+
+        function playpause() {
+            if (myvideo.paused)
+                myvideo.play();
+            else myvideo.pause();
+        }
+
+        function makebig() {
+            myvideo.width = 560;
+        }
+
+        function makesmall() {
+            myvideo.width = 360;
+        }
+
+        function makenormal() {
+            myvideo.width = 420;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div style="text-align: center;">
+        <button onclick="playpause()">Play/ Pause</button>
+        <button onclick="makebig()">big</button>
+        <button onclick="makesmall()">small</button>
+        <button onclick="makenormal()">Normal</button>
+        <br>
+        <video id="video" width="420" autoplay="autoplay" controls="controls">
+            <source src="https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4"
+                type="video/mp4">
+        </video>
+    </div>
+
+
+</body>
+
+</html>

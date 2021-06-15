@@ -1,0 +1,41 @@
+<html>
+
+<body>
+    <script language="javascript" type="text/javascript">
+        function send_with_ajax() {
+            if (window.XMLHttpRequest || window.ActiveXObject) {
+                if (window.ActiveXObject) {
+                    try {
+                        xhr = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (exception) {
+                        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                } else {
+                    xhr = new XMLHttpRequest();
+                }
+            } else {
+                alert("Your browser does not support XMLHTTP Request...!");
+            }
+
+            xhr.open("GET", "demo_textfile.txt", true); // Make sure file is in same server
+            xhr.send("hello");
+
+            xhr.onreadystatechange = function () {
+                document.getElementById("textArea").value = xhr.responseText;
+            };
+
+            // xhr.open("GET", "0.Ajax demo.txt", true);
+            // xhr.send("hello ppl");
+
+            // xhr.onreadystatechange = function () {
+            //     document.getElemetById("textArea").value = xhr.responseText;
+            // };
+        }
+    </script>
+
+    <button onClick="send_with_ajax()">Get Contain</button><br />
+    <textarea id="textArea" cols="40" rows="5"></textArea>
+
+</body>
+
+</html>

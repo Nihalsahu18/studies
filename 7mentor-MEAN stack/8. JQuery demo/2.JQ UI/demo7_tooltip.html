@@ -1,0 +1,19 @@
+<html>
+<link rel="stylesheet" href="jquery-ui.css" />
+<script src="jquery-1.9.1.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+	$(document).ready(function () {
+		$("#age").tooltip({
+			show: {
+				effect: 'blind',
+				duration: 500
+			}
+		})
+		$("img").tooltip();
+	})
+</script>
+Your age:</label><input type='text' id="age" title="Please enter your age here"><br><br>
+<img src='opera.jpg' height='300px' width='300px' title='Opera House Sydney'>
+
+</html>

@@ -1,0 +1,75 @@
+<html>
+<script src="jquery-1.9.1.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+	$(document).ready(function () {
+		$("#draggable").draggable({
+			drag: function () {
+				$(this).find("p").text("dragging");
+				$(this).css({
+					'background': 'pink',
+					'border': '2px solid yellow'
+				});
+			},
+			// 	stop: function () {
+			// 		$(this).find("p").text("why stoped !");
+			// 		$(this).css({
+			// 			'background': 'red',
+			// 			'border': '2px solid purple'
+			// 		});
+			// }
+
+		});
+		$("#droppable").droppable({
+			drop: function () {
+				$(this).find("p").text("Dropped!");
+				$(this).css({
+					'background': 'white',
+					'border': '2px solid yellow'
+				});
+				$(draggable).find("p").text("you have complted your task");
+			},
+			out: function () {
+				$(this).find("p").text("Dropped Out!");
+				$(this).css({
+					'background': 'grey',
+					'border': '2px solid purple'
+				});
+			}
+		})
+	});
+</script>
+<style>
+	#draggable {
+		width: 80px;
+		height: 80px;
+		padding: 0.5em;
+		float: left;
+		margin: 10px 10px 10px 0;
+		border: 2px solid purple;
+		background: aqua;
+	}
+
+	#droppable {
+		width: 150px;
+		height: 150px;
+		padding: 2px;
+		float: left;
+		margin-left: 200px;
+		margin-top: 5px;
+		border: 2px solid purple;
+		background: gray;
+	}
+</style>
+
+<body>
+	<div id="draggable">
+		<p>Drag me to my target</p>
+	</div>
+
+	<div id="droppable">
+		<p>Drop here</p>
+	</div>
+</body>
+
+</html>

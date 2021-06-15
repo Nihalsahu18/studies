@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: lightslategray;
+      }
+
+      h1 {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-gap: 20px;
+        align-items: center;
+        text-shadow: 0px 0px 20px yellow;
+      }
+
+      h1::before {
+        display: block;
+        content: "";
+        height: 15px;
+        background: linear-gradient(
+          to var(--direction, left),
+          orange,
+          yellow,
+          transparent
+        );
+        border-radius: 20%;
+      }
+
+      h1::after {
+        display: block;
+        content: "";
+        height: 15px;
+        background: linear-gradient(
+          to var(--direction, right),
+          orange,
+          yellow,
+          transparent
+        );
+        border-radius: 20%;
+      }
+
+      table {
+        margin: 0 auto;
+        background-color: skyblue;
+        border: 3.5px solid blue;
+      }
+
+      thead {
+        text-shadow: 0px 0px 11px blue;
+      }
+
+      tbody {
+        text-align: center;
+      }
+
+      tr,
+      td {
+        border: 1px solid rgb(181, 18, 214);
+      }
+
+      th {
+        border: 1px solid black;
+      }
+
+      button {
+        background-color: gray;
+        color: white;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        padding: 2px 32px;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 45%;
+        border: 4px solid black;
+        box-shadow: 2px 5px 18px black;
+      }
+
+      button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+    </style>
+    <script>
+      function calm() {
+        var grad = document.getElementById("grade");
+        var m = document.getElementById("mathm");
+        var e = document.getElementById("engm");
+        var h = document.getElementById("hindim");
+        var s = document.getElementById("scim");
+        var m1 = document.getElementById("mathm").value;
+        var e1 = document.getElementById("engm").value;
+        var h1 = document.getElementById("hindim").value;
+        var s1 = document.getElementById("scim").value;
+        var total = Number(m1) + Number(e1) + Number(h1) + Number(s1);
+        var per = total / 4;
+        if (m1 > 30) {
+          m.style.background = "lightgreen";
+        } else {
+          m.style.background = "red";
+        }
+        if (e1 > 30) {
+          e.style.background = "lightgreen";
+        } else {
+          e.style.background = "red";
+        }
+        if (h1 > 30) {
+          h.style.background = "lightgreen";
+        } else {
+          h.style.background = "red";
+        }
+        if (s1 > 30) {
+          s.style.background = "lightgreen";
+        } else {
+          s.style.background = "red";
+        }
+        if (m1 > 30 && e1 > 30 && h1 > 30 && s1 > 30) {
+          if (per < 40) {
+            document.getElementById("grade").innerHTML = "D+";
+          } else if (per < 50) {
+            document.getElementById("grade").innerHTML = "C";
+          } else if (per < 60) {
+            document.getElementById("grade").innerHTML = "C+";
+          } else if (per < 70) {
+            document.getElementById("grade").innerHTML = "B";
+          } else if (per < 80) {
+            document.getElementById("grade").innerHTML = "B+";
+          } else if (per < 90) {
+            document.getElementById("grade").innerHTML = "A";
+          } else if (per <= 100) {
+            document.getElementById("grade").innerHTML = "A+";
+          }
+          grad.style.background = "lightgreen";
+          grad.style.fontWeight = "bold";
+        } else {
+          document.getElementById("grade").innerHTML = "F-";
+          grad.style.background = "red";
+          grad.style.fontWeight = "bold";
+        }
+
+        document.getElementById("total1").innerHTML = total;
+        document.getElementById("per1").innerHTML = per;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Student marksheet</h1>
+    <br />
+    <marquee>Know your grade just by entering your marks.</marquee>
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="2">Student Roll no.</th>
+          <th rowspan="2">Student Name</th>
+          <th rowspan="2">Contact No.</th>
+          <th colspan="4">
+            Subject marks<br />
+            (out of 100)
+          </th>
+          <th rowspan="2">Total<br />(400 marks)</th>
+          <th rowspan="2">Percentage<br />(%)</th>
+          <th rowspan="2">Grade<br />(A+ to F-)</th>
+        </tr>
+        <tr>
+          <th>Math Marks</th>
+          <th>English Marks</th>
+          <th>Hindi Marks</th>
+          <th>Science Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1010</td>
+          <td>Nihal</td>
+          <td>8785251465</td>
+          <td id="m">
+            <input
+              id="mathm"
+              type="number"
+              placeholder="Enter Math Marks"
+              max="100"
+              required
+            />
+          </td>
+          <td id="e">
+            <input
+              id="engm"
+              type="number"
+              placeholder="Enter English Marks"
+              max="100"
+              required
+            />
+          </td>
+          <td id="h">
+            <input
+              id="hindim"
+              type="number"
+              placeholder="Enter Hindi Marks"
+              max="100"
+              required
+            />
+          </td>
+          <td id="s">
+            <input
+              id="scim"
+              type="number"
+              placeholder="Enter Science Marks"
+              max="100"
+              required
+            />
+          </td>
+          <td>
+            <div id="total1"></div>
+          </td>
+          <td>
+            <div id="per1"></div>
+          </td>
+          <td>
+            <div id="grade"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <button onclick="calm()">Click</button>
+  </body>
+</html>

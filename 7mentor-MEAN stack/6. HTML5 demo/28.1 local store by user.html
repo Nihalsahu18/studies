@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function setvalue() {
+            if (window.localStorage) {
+                localStorage.setItem(document.getElementById("key").value, document.getElementById("name").value);
+
+            } else {
+                document.getElementById('msg').innerHTML =
+                    "your browser doesn't support these , kindly update your browser";
+            }
+
+
+
+        }
+
+        function r() {
+            localStorage.removeItem(document.getElementById("key").value);
+
+        }
+
+        function s1() {
+            document.getElementById("op1").innerHTML = localStorage.getItem(document.getElementById("key").value) +
+                "<br>";
+
+        }
+
+
+        function display() {
+            for (let i = 0; i < localStorage.length; i++) {
+                x = localStorage.key(i);
+                y = localStorage.getItem(x)
+                document.getElementById("op1").innerHTML += "key is " + x + "Value is " + y + "<br>";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <label for="key">Enter key</label><input id="key" type="text" /><br>
+        <label for="name">Enter data</label><input id="name" type="text" /><br>
+    </div>
+    <hr>
+    <div>
+        <button type="button" onclick="setvalue()">Add</button><br>
+        <button type="button" onclick="r()">Remove</button><br>
+        <button type="button" onclick="s1()">Display data</button><br>
+        <button type="button" onclick="display()">Display all data</button><br>
+    </div>
+    <hr>
+    <div id="op1"></div>
+</body>
+
+</html>

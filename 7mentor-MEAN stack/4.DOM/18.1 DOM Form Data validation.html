@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Coolgames.com</title>
+    <style>
+      fieldset {
+        background-color: #eeeeee;
+        margin-right: 40%;
+      }
+
+      legend {
+        background-color: gray;
+        color: white;
+        padding: 5px 10px;
+      }
+
+      input {
+        margin: 5px;
+        border: 1px solid skyblue;
+        box-shadow: 4px 4px 20px 0px darkgray;
+      }
+
+      textarea {
+        margin: 5px;
+        border: 1px solid skyblue;
+        box-shadow: 4px 4px 20px 0px darkgray;
+      }
+
+      th {
+        text-align: left;
+      }
+
+      body {
+        background-image: linear-gradient(
+          to bottom right,
+          rgb(216, 177, 167),
+          rgb(144, 211, 130),
+          rgb(132, 152, 218),
+          rgb(235, 149, 149)
+        );
+      }
+
+      div {
+        display: inline;
+      }
+
+      label {
+        font-size: small;
+      }
+    </style>
+    <script>
+      function veri() {
+        // Start Data validation for user id
+        var uid = document.f1.userid.value;
+        console.log(uid);
+        if (uid.length === 0) {
+          document.getElementById("uiderror").innerHTML =
+            "! This fill cannot be empty";
+          uiderror.style.color = "red";
+          return false;
+        } else if (uid.length < 5 || uid.length > 10) {
+          document.getElementById("uiderror").innerHTML =
+            "lenght should be between 6 to 10";
+          uiderror.style.color = "red";
+          return false;
+        } else {
+          document.getElementById("uiderror").innerHTML = "";
+        }
+        // End Data validation for user id
+
+        // Start Data validation for password//
+        var pwd = document.f1.pwd.value;
+        if (pwd.length === 0) {
+          document.getElementById("pwderror").innerHTML =
+            "! This fill cannot be empty";
+          pwderror.style.color = "red";
+          return false;
+        } else if (pwd.length < 6 || pwd.length > 12) {
+          document.getElementById("pwderror").innerHTML =
+            "Passsword length should be 6-12";
+          document.f1.pwd.focus();
+          uiderror.style.color = "red";
+          return false;
+        } else {
+          document.getElementById("pwderror").innerHTML = "";
+        }
+        var numflag = false;
+        var capitalflag = false;
+        var smallflag = false;
+        var spflag = false;
+        for (i = 0; i < pwd.length; i++) {
+          var ascii = pwd.charCodeAt(i);
+          if (ascii >= 48 && ascii <= 57) numflag = true;
+          if (ascii >= 65 && ascii <= 90) capitalflag = true;
+          if (ascii >= 97 && ascii <= 122) smallflag = true;
+          if (
+            !(
+              (ascii >= 65 && ascii <= 90) ||
+              (ascii >= 97 && ascii <= 122) ||
+              (ascii >= 48 && ascii <= 57)
+            )
+          )
+            spflag = true;
+        }
+        if (
+          numflag == false ||
+          capitalflag == false ||
+          spflag == false ||
+          smallflag == false
+        ) {
+          document.getElementById("pwderror").innerHTML = "invalid password";
+          document.f1.pwd.focus();
+          return false;
+        }
+        // End Data validation for password//
+
+        // start confrim password match//
+        var conpwd = document.f1.cpwd.value;
+        var orgpwd = document.f1.pwd.value;
+        if (conpwd.length == 0) {
+          document.getElementById("cpwderror").innerHTML =
+            "Please Enter the same password again";
+          document.f1.cpwd.focus();
+          cpwderror.style.color = "red";
+          return false;
+        } else if (orgpwd.length !== conpwd.length) {
+          document.getElementById("cpwderror").innerHTML =
+            "password length don't match";
+          document.f1.cpwd.focus();
+          cpwderror.style.color = "red";
+          return false;
+        } else if (conpwd != orgpwd) {
+          document.getElementById("cpwderror").innerHTML =
+            "password don't match";
+          document.f1.cpwd.focus();
+          cpwderror.style.color = "red";
+          return false;
+        } else {
+          document.getElementById("cpwderror").innerHTML = "Password match";
+          cpwderror.style.color = "green";
+        }
+        // End confrim password match//
+
+        // Personal information Validation
+
+        //First name
+        var fname = document.f1.fname.value;
+        if (fname.length == 0) {
+          document.getElementById("ferror").innerHTML = "Please field this";
+          document.f1.fname.focus();
+          ferror.style.color = "red";
+          return false;
+        } else {
+          document.getElementById("ferror").innerHTML = "";
+        }
+        //last name
+        var lname = document.f1.lname.value;
+        if (lname.length == 0) {
+          document.getElementById("lerror").innerHTML = "Please field this";
+          lerror.style.color = "red";
+          document.f1.lname.focus();
+          return false;
+        } else {
+          document.getElementById("lerror").innerHTML = "";
+        }
+
+        // Email validation
+        var mail = document.f1.mailid.value;
+        console.log(mail);
+        var atflag = false;
+        var dotflag = false;
+        if (mail.length == 0) {
+          document.getElementById("mailerror").innerHTML =
+            "Please enter email address";
+          document.f1.mailid.focus();
+          mailerror.style.color = "red";
+          return false;
+        } else {
+          for (i = 0; i < mail.length; i++) {
+            var a1 = mail.charCodeAt(i);
+            console.log(a1);
+            if (a1 == "64") {
+              atflag = true;
+            }
+            if (a1 == "46") {
+              dotflag = true;
+            }
+            console.log(atflag);
+            console.log(dotflag);
+          }
+          if (atflag == true && dotflag == true) {
+            document.getElementById("mailerror").innerHTML = "";
+          } else {
+            document.getElementById("mailerror").innerHTML =
+              "Please validate email address";
+            mailerror.style.color = "red";
+            document.f1.mailid.focus();
+            return false;
+          }
+        }
+
+        //Mobile validation
+        var mob = document.f1.mob.value;
+        if (mob.length == 0) {
+          document.getElementById("moberror").innerHTML =
+            "Please mobile number";
+          moberror.style.color = "red";
+          document.f1.mob.focus();
+          return false;
+        } else if (mob.length > 10 || mob.length < 9) {
+          document.getElementById("moberror").innerHTML =
+            "mobile number should be in 10 digits";
+          moberror.style.color = "red";
+          document.f1.mob.focus();
+          return false;
+        } else {
+          var nonumflag = false;
+          for (i = 0; i < mob.length; i++) {
+            var mobi = mob.charCodeAt(i);
+            if (mobi > 57 || mobi < 48) {
+              nonumflag = true;
+              break;
+            }
+          }
+          if (nonumflag == true) {
+            document.getElementById("moberror").innerHTML =
+              "only numbers are allowed ";
+            moberror.style.color = "red";
+            document.f1.mob.focus();
+            return false;
+          } else {
+            document.getElementById("moberror").innerHTML = " ";
+          }
+        }
+
+        //gender validation
+        var m1 = document.f1.Male.checked;
+        var f1 = document.f1.Female.checked;
+        console.log(m1);
+        console.log(f1);
+        if (m1 == false && f1 == false) {
+          document.getElementById("gendererror").innerHTML =
+            "Please, Select any one gender";
+          gendererror.style.color = "red";
+          document.f1.Male.focus();
+          return false;
+        } else {
+          document.getElementById("gendererror").innerHTML = "";
+        }
+
+        // TnC validation
+        var tnc = document.f1.tnc.checked;
+        console.log(tnc);
+        if (tnc == false) {
+          document.getElementById("tncerror").innerHTML =
+            "Please, tick this box if you have read all TnC. ";
+          tncerror.style.color = "red";
+          return false;
+        } else {
+          document.getElementById("tncerror").innerHTML = "";
+        }
+      }
+
+      function togglepwd() {
+        var temp = document.getElementById("pwd");
+        if (temp.type === "password") {
+          temp.type = "text";
+        } else {
+          temp.type = "password";
+        }
+      }
+
+      function togglecpwd() {
+        var temp = document.getElementById("cpwd");
+        if (temp.type === "password") {
+          temp.type = "text";
+        } else {
+          temp.type = "password";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <marquee><h1>Welcome to Coolgames.com</h1></marquee>
+    <form name="f1" action="" target="_blank" onsubmit="return veri()">
+      <fieldset form="f1">
+        <legend>To signup for Coolgames</legend>
+        <table>
+          <tr>
+            <th>User Name</th>
+            <td>
+              <input
+                id="userid"
+                type="text"
+                placeholder="Enter your unqiue userId"
+                autofocus
+              />
+            </td>
+            <td>
+              <div id="uiderror"></div>
+            </td>
+          </tr>
+          <tr>
+            <th>Create Password</th>
+            <td>
+              <input
+                id="pwd"
+                type="password"
+                placeholder="Enter your New Password"
+              /><br /><input type="checkbox" onclick="togglepwd()" /><label
+                >Visible password</label
+              >
+            </td>
+            <td>
+              <div id="pwderror"></div>
+            </td>
+          </tr>
+          <tr>
+            <th>Confrim Password</th>
+            <td>
+              <input
+                id="cpwd"
+                type="password"
+                placeholder="Verfiy your Password"
+              /><br /><input type="checkbox" onclick="togglecpwd()" /><label
+                >Visible password</label
+              >
+            </td>
+            <td>
+              <div id="cpwderror"></div>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+      <fieldset form="f1">
+        <legend>Personal Information</legend>
+        <table>
+          <tr>
+            <th width="130px">First Name:</th>
+            <td>
+              <input
+                id="fname"
+                type="text"
+                placeholder="Enter your first name"
+              />
+            </td>
+            <td>
+              <div id="ferror"></div>
+            </td>
+          </tr>
+          <tr>
+            <th>Middle Name:</th>
+            <td><input type="text" placeholder="Enter your Middle name" /></td>
+          </tr>
+          <tr>
+            <th>Last Name:</th>
+            <td>
+              <input
+                id="lname"
+                type="text"
+                placeholder="Enter your Last name"
+              />
+            </td>
+            <td>
+              <div id="lerror"></div>
+            </td>
+          </tr>
+          <tr>
+            <th>Address:</th>
+            <td>
+              <textarea
+                form="f1"
+                rows="4"
+                cols="25"
+                placeholder="Enter your Address"
+                wrap="soft"
+              ></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Email:</th>
+            <td>
+              <input
+                id="mailid"
+                type="text"
+                placeholder="Enter your Email address"
+              />
+            </td>
+            <td>
+              <div id="mailerror"></div>
+            </td>
+          </tr>
+          <tr>
+            <th>Mobile no:</th>
+            <td>
+              <input
+                id="mob"
+                type="tel"
+                placeholder="Enter your Mobile number"
+              />
+            </td>
+            <td>
+              <div id="moberror"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Gender:</th>
+            <td>
+              <input type="radio" id="Male" name="Gender" value="Male" /><label
+                >Male</label
+              ><br />
+              <input
+                type="radio"
+                id="Female"
+                name="Gender"
+                value="Female"
+              /><label>Female</label><br />
+            </td>
+
+            <td>
+              <div id="gendererror"></div>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+
+      <input type="checkbox" id="tnc" />
+      <label
+        >Please tick on the box for accpecting all term term & condition of
+        Coolgames</label
+      ><br />
+      <div id="tncerror"></div>
+      <br /><br />
+      <div>
+        <input type="submit" value="Create" />
+        <input type="reset" />
+      </div>
+    </form>
+  </body>
+</html>

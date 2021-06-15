@@ -1,0 +1,13 @@
+<html>
+<i id='msg'> First name will be displayed here when you will click below button </i><br><br>
+<a href="25.demo1_localstorage(anotherpage).html">Another Page</a><br><br>
+<script language='javascript'>
+	if (window.localStorage) {
+		localStorage.setItem('fname', 'Nihalsahu');
+		document.getElementById('msg').innerHTML = "Hello " + localStorage.getItem('fname');
+	} else {
+		document.getElementById('msg').innerHTML = "your browser doesn't support these , kindly update your browser";
+	}
+</script>
+
+</html>

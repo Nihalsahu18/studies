@@ -1,0 +1,47 @@
+<html>
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#slide").click(function () {
+			$("#panel").slideToggle("slow");
+		})
+	})
+</script>
+
+<style type="text/css">
+	#panel {
+		background: #754c24;
+		height: 170px;
+		display: none;
+		color: green;
+		font-size: 20px;
+	}
+
+	#slide {
+		height: 40px;
+		width: 200px;
+		text-align: center;
+		background: darkorange;
+		border-radius: 0px 0px 10px 10px;
+		padding-top: 10px;
+		font-weight: bold;
+		font-size: 20px;
+		margin-left: 380px;
+		color: blue;
+	}
+</style>
+</head>
+
+<body>
+	<fieldset id="panel">
+		<legend style='color:red;font-weight:bold;font-size:20px;'> jQuery </legend>
+		<ul>
+			<li> jQuery is a JavaScript Library </li><br>
+			<li> jQuery greatly simplifies JavaScript programming </li><br>
+			<li> jQuery is easy to learn </li>
+		</ul>
+	</fieldset>
+	<p id="slide">Slide Panel</p>
+</body>
+
+</html>

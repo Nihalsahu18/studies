@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <script src= 
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+        </script> 
+        <script> 
+            $(document).ready(function(){ 
+                $("button").click(function(){ 
+                    $(this).hide();
+                    $("#div_content").load("hello.txt"); 
+                }); 
+            }); 
+        </script> 
+        <style> 
+            body { 
+                text-align: center; 
+            } 
+            .c1 { 
+                font-size:40px; 
+                font-weight: bold; 
+                color: green; 
+            } 
+            .c2 { 
+                font-size:17px; 
+                color: black; 
+            } 
+            #div_content { 
+                font-size: 40px; 
+                font-weight: bold; 
+                color: green; 
+            } 
+        </style> 
+    </head> 
+    <body> 
+        <div id="div_content"> 
+            <div class = "c1">SevenMentor</div> 
+            <div class = "c2">A course portal for Sevenmentor</div> 
+        </div> 
+        <button>Change Content</button> 
+    </body> 
+</html> 

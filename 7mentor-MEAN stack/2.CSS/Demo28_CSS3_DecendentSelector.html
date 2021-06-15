@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Decendent Selector</title>
+    <style>
+        /*decendent selector syntax*/
+        div p {
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Hello welcome to my paragraph 1</p>
+        <p>Hello welcome to my paragraph 2</p>
+        <div>
+            <p>Hello welcome to my paragraph 1</p>
+            <p>Hello welcome to my paragraph 2</p>
+
+        </div>
+    </div>
+    <p>Hello welcome to my paragraph 1</p>
+    <div>
+        <p>Hello welcome to my paragraph 1</p>
+        <p>Hello welcome to my paragraph 2</p>
+    </div>
+    <p>Hello welcome to my paragraph 1</p>
+    <p>Hello welcome to my paragraph 2</p>
+    <p>Hello welcome to my paragraph 1</p>
+    <p>Hello welcome to my paragraph 2</p>
+    <ul>
+        <li>
+            <p>Hello welcome to my paragraph 1</p>
+            <p>Hello welcome to my paragraph 2</p>
+        </li>
+        <li>
+            <div>
+                <p>Hello welcome to my paragraph 1</p>
+            </div>
+        </li>
+    </ul>
+
+    </p>
+    <button aria-haspopup="true" aria-expanded="false">Toggle</button>
+    <div hidden="" id="tooltip">
+        Thanks for toggling! Please click again to hide me.
+    </div>
+</body>
+</body>
+
+</html>

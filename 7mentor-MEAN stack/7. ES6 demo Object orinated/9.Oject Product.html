@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class product {
+            constructor(pid, pname, price, desc, discount = 0, disprice = 0) {
+                this.pid = pid;
+                this.pname = pname;
+                this.price = price;
+                this.desc = desc;
+                this.discount = discount;
+                this.disprice = disprice;
+            }
+            cal() {
+                this.disprice = ((1 - (this.discount / 100)) * this.price);
+
+                console.log("The orginal price of product is " + this.price + "Rs discount given is " + this
+                    .discount + "% price after discount is " + this.disprice + "Rs");
+                return this.disprice;
+            }
+            listDetails() {
+                console.log(this.pid);
+                console.log(this.pname);
+                console.log(this.price);
+                console.log(this.desc);
+                console.log(this.discount);
+                console.log(this.disprice);
+            }
+
+        }
+        var p1 = new product(1, "TV", 35000, "this is HD TV.", 50, 0);
+        p1.cal();
+        p1.listDetails();
+
+        var p2 = new product(1, "mobile", 50000, "this is latest mobile.", 10, 0);
+        p2.cal();
+        p2.listDetails();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

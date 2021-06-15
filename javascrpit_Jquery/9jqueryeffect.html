@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('li').click(function() {
+                $(this).hide(100, () => {
+                    console.log("Done");
+                });
+            })
+            $('button').click(function() {
+                $('ul').toggle(150);
+            })
+
+
+        })
+    </script>
+</head>
+
+<body>
+    h1 id="title">Title</h1>
+    <p class="paragraph">Lorem ipsum dolor sit amet</p>
+    <p class="paragraph1">Lorem ipsum dolor sit amet</p>
+    <input type="text" name="csscol" id=""></input>
+    <button type="button">Show</button>
+    <ul>
+        <li>List1</li>
+        <li>List2</li>
+        <li class="li3">List3</li>
+        <li>List4</li>
+        <li>List5</li>
+    </ul>
+
+    <ul>
+        <li>List1</li>
+        <li>List2</li>
+        <li class="li3">List3</li>
+        <li>List4</li>
+        <li>List5</li>
+    </ul>
+</body>
+
+</html>

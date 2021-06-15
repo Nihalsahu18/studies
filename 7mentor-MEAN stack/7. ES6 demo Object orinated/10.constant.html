@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var number = [4, 09, 16, 25, 29];
+        var first = number.find(myFunction);
+        var sec = number.findIndex(myFunction);
+        console.log(first);
+        console.log(sec);
+
+        function myFunction(value, index, array) {
+            return value > 18;
+        }
+    </script>
+
+</head>
+
+<body>
+    Array.find()
+    The Find() method returns the value of the first array element that pass a test function.
+</body>
+
+</html>

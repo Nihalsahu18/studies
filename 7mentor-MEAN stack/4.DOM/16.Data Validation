@@ -1,0 +1,45 @@
+Class on 28th may 2020
+
+first name: reqd
+last Name:  reqd
+username:   length,reqd
+password:   length,reqd,spl charc,digit & captical
+confrim password:   same with above
+address:
+email.com: reqd,email
+mobile no.: 10 digit no.
+gender: reqd
+terms & condition-check
+
+submit
+
+
+            var conpwd = document.f1.cpwd.value;
+            var orgpwd = document.f1.pwd.value;
+            var match = true;
+            if (orgpwd.length !== conpwd.length) {
+                document.getElementById("cpwderror").innerHTML = "password length don't match";
+                document.f1.cpwd.focus();
+                cpwderror.style.color = "red";
+                return false;
+            } else {
+                document.getElementById("cpwderror").innerHTML = "";
+            }
+            for (let i = 0; i < orgpwd.length; i++) {
+                var a1 = orgpwd.charCodeAt(i);
+                var a2 = conpwd.charCodeAt(i);
+                if (a1 == a2) {
+                    match = true;
+                } else {
+                    match = false;
+                }
+            }
+            if (match == false) {
+                document.getElementById("cpwderror").innerHTML = "password length don't match";
+                document.f1.cpwd.focus();
+                cpwderror.style.color = "red";
+                return false;
+            } else {
+                document.getElementById("cpwderror").innerHTML = "password match";
+                cpwderror.style.color = "green";
+            }

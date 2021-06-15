@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a1 = ["First", "Second", "Thrid", "fourth"]; //decalre array
+        a1.toString(); // tostring array method    
+        document.write(a1);
+        document.write("<br>"); // print array & break line
+        document.write("tostring() converts an array to string of (comma separeted) array values");
+        document.write("<hr>");
+
+        a1.pop();
+        document.write(a1);
+        document.write("<br>"); // print array & break line
+        document.write("pop() method removes the last elements from an array");
+        document.write("<hr>");
+
+        a1.push("nihal");
+        document.write(a1);
+        document.write("<br>"); // print array & break line
+        document.write("push() method add a new elements to an array at the end");
+        document.write(" <hr> ");
+
+        a1.shift();
+        document.write(a1);
+        document.write("<br>"); // print array & break line
+        document.write("shift() method remove the firtst array elemet and shift all other elements to a ");
+        document.write("<hr>");
+
+
+        a1.unshift("sahu");
+        document.write(a1);
+        document.write("<br>"); // print array & break line
+        document.write("unshift() method add a new elements to an array(at the beginning) ");
+        document.write("<hr>");
+
+        document.write(a1.splice(2, 0, "111", "222"));
+        document.write("<hr>");
+        document.write(a1.splice(2, 2, "111", "222"));
+        // it very important
+        document.write(a1);
+        document.write("<br>"); // print array & break line
+        document.write("splice() method can be used to add new item to an array");
+        document.write("<hr>");
+
+
+        var a2 = [21, 38, 68, 70]; // declare array
+        document.write(a2.sort()); // sort array
+
+        document.write("<hr>");
+        document.write(a2.reverse()); // reverse array
+    </script>
+</body>
+
+</html>

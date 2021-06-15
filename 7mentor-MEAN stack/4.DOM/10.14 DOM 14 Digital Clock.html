@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <title>Digital Time</title>
+</head>
+<script>
+  function disptime() {
+    var current = new Date();
+    var hh = current.getHours();
+    if (hh < 10) {
+      hh = "0" + hh;
+    }
+    var mm = current.getMinutes();
+    if (mm < 10) {
+      mm = "0" + mm;
+    }
+    var ss = current.getSeconds();
+    if (ss < 10) {
+      ss = "0" + ss;
+    }
+    var ms = current.getMilliseconds();
+    if (ms < 10) {
+      ms = "00" + ms;
+    }
+    if (ms < 100 && ms > 9) {
+      ms = "0" + ms;
+    }
+    var str = hh + ":" + mm + ":" + ss + ":" + ms;
+    document.getElementById("time").innerHTML = str;
+    f = setInterval(function () {
+      disptime();
+    }, 1);
+  }
+
+  function stopclock() {
+    clearTimeout(f);
+
+  }
+</script>
+
+<body onload="disptime()">
+  <br>
+  <div style="float: right;" id="time">Time</div>
+  <br />
+  <hr color="black" />
+  <button onclick="stopclock()">STOP</button>
+  <div id="lap"></div>
+</body>
+
+</html>

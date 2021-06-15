@@ -1,0 +1,11 @@
+Event handling: 
+Event:          Click,blur,load        
+Event listener: program 
+Event Handler:  code that is get executed when event is occur.
+
+
+button-Click
+<button onclick="f1()">Click Me</button>
+function f1(){
+
+}// Event Handler

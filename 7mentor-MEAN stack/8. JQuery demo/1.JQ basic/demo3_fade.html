@@ -1,0 +1,39 @@
+<html>
+<script src='lib/jquery.min.js'> </script>
+<script language='javascript'>
+	$(document).ready(function () {
+		$('#btn1').click(function () {
+			$('#div1').fadeIn(2000);
+			$('#div2').fadeIn(4000);
+			$('#div3').fadeIn(6000);
+		})
+		$('#btn2').click(function () {
+			$('#div1').fadeOut(2000);
+			$('#div2').fadeOut(4000);
+			$('#div3').fadeOut(6000);
+		})
+		$('#btn3').click(function () {
+			$('#div1').fadeToggle(2000);
+			$('#div2').fadeToggle(4000);
+			$('#div3').fadeToggle(6000);
+		})
+		$('#btn4').click(function () {
+			$('#div1').fadeTo('2000', 0.2); /* speed,opcity(value must be from 0 to 1) */
+			$('#div2').fadeTo('2000', 0.4);
+			$('#div3').fadeTo('2000', 0.6);
+		})
+	})
+</script>
+
+<body>
+	<p>fade with different parameters.</p>
+	<button id='btn1'>Fade In </button>
+	<button id='btn2'>Fade Out </button>
+	<button id='btn3'>Fade Toggle </button>
+	<button id='btn4'>Fade To </button><br><br>
+	<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+	<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+	<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+</body>
+
+</html>

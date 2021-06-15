@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .mystyle {
+            background-color: gray;
+            color: blue;
+        }
+    </style>
+    <script src="lib/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#parent").click(function () {
+                //$("li").parent().css("color", "blue");
+                $("li").parents().css("color", "red");
+                alert($("li").parentsUntil("p").length);
+            });
+
+            $("#child").click(function () {
+                //$("div").children().css("text-decoration", "overline");
+                $("div").find("p").css("background-color", "blue");
+            });
+
+            $("#sibling").click(function () {
+                //$("#use").siblings().hide();
+                //$("#use").prevAll().toggle("slow");
+                //$("#use").nextAll().addClass("mystyle");
+                $("#use").prevUntil("h1").css("opacity", "0.3");
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div style="background-color:yellow;width:400px;height:300px">
+
+        <h1>Learning Jquery</h1>
+        <p> Jquery is java script library </p>
+        <p id="desc">Jquery is lightweight and used for ease of client side scripting</p>
+        <p id="use"> All action can be categorized into set of functions </p>
+        <p>Jquery Effects</p>
+        <ul>
+            <li>Hiding effect</li>
+            <li>Fading effect</li>
+            <li>Sliding effect</li>
+            <li>Animation effect</li>
+        </ul>
+        <a href="#"> Learn More </a>
+    </div>
+    <button id="parent">Effect on Parents</button> <br />
+    <button id="child">Effect on child</button> <br />
+    <button id="sibling">Effect on siblings</button>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate() {
+            var uname = document.f1.user.value;
+            console.log(uname);
+            var pwd = document.f1.pwd1.value;
+            console.log(pwd);
+
+            if (uname.length < 6 || uname.length > 8) {
+                // alert("user length must between 6 to 8 character");
+                document.getElementById("uerror").innerHTML = "user length must between 6 to 8 character";
+                document.f1.user.value = "";
+                document.f1.user.focus();
+                return false;
+            }
+
+            if (pwd1.length < 6 || pwd1.length > 10) {
+                document.getElementById("perror").innerHTML = "password length must between 6 to 8 character";
+                document.f1.pwd1.value = "";
+                document.f1.pwd1.focus();
+                return false;
+            }
+
+            var numflag = false;
+            var capitalflag = false;
+            var spflag = false;
+            for (i = 0; i < pwd.length; i++) {
+                var ascii = pwd.charCodeAt(i);
+                if (ascii >= 48 && ascii <= 57)
+                    numflag = true;
+                if (ascii >= 65 && ascii <= 90)
+                    capitalflag = true;
+                if (!((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122) || (ascii >= 48 && ascii <= 57)))
+                    spflag = true;
+            }
+            if (numflag == false || capitalflag == false || spflag == false) {
+                //alert("Atleast onedigit is required in password ");
+                //alert(" invalid password - one digit, one capital and one special character");
+                document.getElementById("perror").innerHTML = "invalid password";
+                document.f1.pwd.value = "";
+                document.f1.pwd.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="f1" action="http://www.google.com" target="_blank" onsubmit="return validate()">
+        <label>Enter Username :</label><input type="text" id="user"><br>
+        <p id="uerror" style="color: red;font-weight: bold;"></p>
+        <label>Enter Password :</label><input type="password" id="pwd1"><br>
+        <p id="perror" style="color: red;font-weight: bold;"></p>
+        <input type="submit" value="Login">
+    </form>
+</body>
+
+</html>

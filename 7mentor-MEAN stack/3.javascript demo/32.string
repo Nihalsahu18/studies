@@ -1,0 +1,13 @@
+1>  var string="I name is pritika narayan Kurve";
+    var newstring=string1.indexof("narayan");
+    document.write(newstring);
+    
+2>  Var string="Hello My name is pritika pritika Kurve";
+    var newstring=string.lastindexof("pritika");
+    document.write(newstring);
+    var newstring=string.indexof("pritika");
+    document.write(newstring);
+
+3>  var string="hello welcome to world of java scrpit";
+    var newstring=string.search("world");
+    document.write(newstring);

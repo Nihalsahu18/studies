@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type='text/css'>
+        ul {
+            display: none;
+            /*this is use to hide the data*/
+            background: aqua;
+            color: red;
+            width: 250px;
+        }
+
+        b {
+            background: black;
+            color: yellow;
+            font-weight: bold;
+            border: 1px solid purple;
+        }
+    </style>
+    <script src="lib/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sec1').mouseenter(function () {
+                $('#list1').slideDown();
+            })
+            $('#sec2').mouseenter(function () {
+                $('#list2').slideDown();
+            })
+            $('#sec1').mouseleave(function () {
+                $('#list1').slideUp();
+            })
+            $('#sec2').mouseleave(function () {
+                $('#list2').slideUp();
+            })
+
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <b id='sec1'>PHP-MySQL</b><br>
+    <ul id='list1'>
+        <li>Pre-requisites :: HTML, CSS, JS</li>
+        <li>Install XAMPP Server</li>
+    </ul><br>
+
+    <b id='sec2'>HTML5-CSS3-jQuery</b>
+    <ul id='list2'>
+        <li>Pre-requisites :: HTML, CSS, JS</li>
+        <li>Install Google Chrome and Editplus3.0+</li>
+    </ul>
+</body>
+
+</html>

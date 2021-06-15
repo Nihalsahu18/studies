@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            padding: 10px;
+            display: flex;
+            background-color: salmon;
+
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            flex-direction: row;
+            /* flex-direction: row-reverse; */
+
+            flex-wrap: wrap;
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* flex-flow: row wrap; */
+
+            /* justify-content: center; */
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+            /* justify-content: space-around; */
+            justify-content: space-between;
+
+            /* align-items: center; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: stretch; */
+            align-items: baseline;
+
+
+            /* align-content: space-between; */
+            /* align-content: space-around; */
+            /* align-content: stretch; */
+            /* align-content: center; */
+            /* align-content: flex-start; */
+            align-content: flex-end;
+        }
+
+        .flex-container>div {
+            height: 80px;
+            width: 80px;
+            background-color: aqua;
+            border: 1px solid rgb(0, 255, 64);
+            padding: 10px;
+            margin: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div style="order: 1">2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div style="flex-grow: 6">3</div>
+        <div>1</div>
+        <div style="flex-shrink: 0">2</div>
+        <div>3</div>
+        <div style="flex-basis: 200px">1</div>
+        <div style="flex: 0 0 200px">2</div>
+
+    </div>
+    <p>A Flexible Layout must have a parent element with the <em>Display</em> property set to <em>Flex</em></p>
+    <p>Direct Child elements of the flexible container automatically becomes flexible container automatically becomes
+        flexible items</p>
+</body>
+
+</html>
